@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class ViewController {
+class AudioMonitor {
     
     var recorder: AVAudioRecorder!
     var levelTimer = NSTimer()
@@ -48,8 +48,9 @@ class ViewController {
         recorder.record()
         
         //instantiate a timer to be called with whatever frequency we want to grab metering values
-        self.levelTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
         
+        levelTimer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
+    
         //}
         
     }
