@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		676FB6B81C7824630008D7DD /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6B71C7824630008D7DD /* StartScreenViewController.swift */; };
+		676FB6BA1C78281F0008D7DD /* CalibratingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6B91C78281F0008D7DD /* CalibratingViewController.swift */; };
 		D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */; };
-		D153E9201C7816AD00DDBD1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91F1C7816AD00DDBD1B /* ViewController.swift */; };
 		D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9211C7816AD00DDBD1B /* Main.storyboard */; };
 		D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E9241C7816AD00DDBD1B /* Assets.xcassets */; };
 		D153E9281C7816AD00DDBD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9261C7816AD00DDBD1B /* LaunchScreen.storyboard */; };
@@ -81,9 +82,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		676FB6B71C7824630008D7DD /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		676FB6B91C78281F0008D7DD /* CalibratingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibratingViewController.swift; sourceTree = "<group>"; };
 		D153E91A1C7816AD00DDBD1B /* SnoreScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoreScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D153E91F1C7816AD00DDBD1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D153E9221C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D153E9241C7816AD00DDBD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D153E9271C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,11 +169,12 @@
 			isa = PBXGroup;
 			children = (
 				D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */,
-				D153E91F1C7816AD00DDBD1B /* ViewController.swift */,
 				D153E9211C7816AD00DDBD1B /* Main.storyboard */,
 				D153E9241C7816AD00DDBD1B /* Assets.xcassets */,
 				D153E9261C7816AD00DDBD1B /* LaunchScreen.storyboard */,
 				D153E9291C7816AD00DDBD1B /* Info.plist */,
+				676FB6B71C7824630008D7DD /* StartScreenViewController.swift */,
+				676FB6B91C78281F0008D7DD /* CalibratingViewController.swift */,
 			);
 			path = SnoreScore;
 			sourceTree = "<group>";
@@ -417,7 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D153E9201C7816AD00DDBD1B /* ViewController.swift in Sources */,
+				676FB6B81C7824630008D7DD /* StartScreenViewController.swift in Sources */,
+				676FB6BA1C78281F0008D7DD /* CalibratingViewController.swift in Sources */,
 				D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +735,7 @@
 				D153E9651C7816AD00DDBD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D153E9671C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -739,6 +744,7 @@
 				D153E9691C7816AD00DDBD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D153E96B1C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore" */ = {
 			isa = XCConfigurationList;
@@ -747,6 +753,7 @@
 				D153E96D1C7816AD00DDBD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D153E96E1C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScoreTests" */ = {
 			isa = XCConfigurationList;
@@ -755,6 +762,7 @@
 				D153E9701C7816AD00DDBD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D153E9711C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -763,6 +771,7 @@
 				D153E9731C7816AD00DDBD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
