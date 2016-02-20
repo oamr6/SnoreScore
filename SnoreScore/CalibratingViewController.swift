@@ -12,8 +12,11 @@ class CalibratingViewController: UIViewController {
 
     @IBOutlet weak var CalibrationStatus: UIActivityIndicatorView!
     @IBOutlet weak var CalibrationLabel: UILabel!
+    var status: String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        CalibrationLabel.text = status
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +24,22 @@ class CalibratingViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func CheckStatus(){
+        /*
+        if()
+        {
+            CalibrationLabel.text = "Calibrating"
+        }
+        else{
+            CalibrationLabel.text = "Please repeat: " + " Good night don't let the bed bugs bite!"
+        }
+        if()
+        {
+            CalibrationLabel.text = "Ready"
+        }
+*/
     }
     
     

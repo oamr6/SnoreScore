@@ -34,26 +34,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-8N-AZt">
-                                <rect key="frame" x="267" y="471" width="66" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-8N-AZt">
+                                <rect key="frame" x="272" y="471" width="57" height="30"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <action selector="Calibrate:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="Wt5-uF-Qfo"/>
-                                    <segue destination="apC-hj-6pK" kind="show" id="irg-CL-4vB"/>
+                                    <action selector="goToSettings:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="lCn-nm-LZm"/>
+                                    <segue destination="apC-hj-6pK" kind="show" id="vWI-3j-Lcb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-99-9TJ">
-                                <rect key="frame" x="277" y="164" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-99-9TJ">
+                                <rect key="frame" x="261" y="164" width="78" height="30"/>
                                 <state key="normal" title="Start Score"/>
                                 <connections>
-                                    <segue destination="qQF-76-ps2" kind="show" id="I4e-bN-sjf"/>
+                                    <action selector="goToSnoreRecorder:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="Lml-Hx-MyM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-aM-O2a">
-                                <rect key="frame" x="277" y="305" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-aM-O2a">
+                                <rect key="frame" x="269" y="305" width="62" height="30"/>
                                 <state key="normal" title="Calibrate"/>
                                 <connections>
-                                    <segue destination="awH-yg-LBW" kind="show" id="nOL-a7-frF"/>
+                                    <action selector="goToCalibrate:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="OOD-NV-tnw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,7 +150,7 @@
         <!--Snore Recorder View Controller-->
         <scene sceneID="AP3-9J-Ac4">
             <objects>
-                <viewController id="qQF-76-ps2" customClass="SnoreRecorderViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SnoreRecorder" id="qQF-76-ps2" customClass="SnoreRecorderViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="19X-qF-gso"/>
                         <viewControllerLayoutGuide type="bottom" id="dfp-vP-cO1"/>
@@ -157,8 +158,33 @@
                     <view key="view" contentMode="scaleToFill" id="Kf6-cz-ugb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x22-Eb-2mU">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcW-m0-QAJ">
+                                <rect key="frame" x="277" y="370" width="46" height="30"/>
+                                <state key="normal" title="Label"/>
+                                <connections>
+                                    <action selector="changeStatus:" destination="qQF-76-ps2" eventType="touchUpInside" id="Shh-ul-86T"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rcW-m0-QAJ" firstAttribute="centerX" secondItem="x22-Eb-2mU" secondAttribute="centerX" id="0GF-AA-2bP"/>
+                            <constraint firstItem="x22-Eb-2mU" firstAttribute="centerY" secondItem="Kf6-cz-ugb" secondAttribute="centerY" id="Ih1-iO-XN7"/>
+                            <constraint firstItem="rcW-m0-QAJ" firstAttribute="top" secondItem="x22-Eb-2mU" secondAttribute="bottom" constant="59" id="UeT-yL-oMc"/>
+                            <constraint firstItem="x22-Eb-2mU" firstAttribute="centerX" secondItem="Kf6-cz-ugb" secondAttribute="centerX" id="lXo-7f-6oN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonState" destination="rcW-m0-QAJ" id="hyV-Gu-vUN"/>
+                        <outlet property="state" destination="x22-Eb-2mU" id="JHC-9b-jSn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJy-38-ugY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +193,7 @@
         <!--Calibrating View Controller-->
         <scene sceneID="peZ-5G-dJP">
             <objects>
-                <viewController id="awH-yg-LBW" customClass="CalibratingViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calibration" id="awH-yg-LBW" customClass="CalibratingViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ETi-BL-azS"/>
                         <viewControllerLayoutGuide type="bottom" id="Rv1-Gh-iXU"/>
@@ -176,7 +202,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-Yw-Eb9">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-Yw-Eb9">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calibrating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-VX-hKJ">
@@ -188,7 +214,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nf4-VX-hKJ" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="DGX-5u-pcv"/>
+                            <constraint firstItem="nf4-VX-hKJ" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" constant="1" id="DGX-5u-pcv"/>
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="KMM-fy-jzm"/>
                             <constraint firstItem="nf4-VX-hKJ" firstAttribute="top" secondItem="Hwx-Yw-Eb9" secondAttribute="bottom" constant="45" id="MuG-GT-HH3"/>
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerY" secondItem="pCT-U5-kJT" secondAttribute="centerY" id="SsX-iS-jgb"/>
@@ -201,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzb-wF-nIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="329"/>
+            <point key="canvasLocation" x="1462" y="303"/>
         </scene>
     </scenes>
 </document>
