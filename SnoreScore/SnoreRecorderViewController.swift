@@ -78,6 +78,10 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func startAudio() {
+        var baseLine: Double!
+        var speakingThreshold : Double!
+        baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
+        speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
         // Make an AudioSession, set it to PlayAndRecord and make it active
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         do {
