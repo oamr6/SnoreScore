@@ -30,6 +30,7 @@ class CalibratingViewController: UIViewController {
         CalibrationLabel.text = "Prepare for Microphone Calibration"
         CalibrationStatus.startAnimating()
         CalButton.enabled = false
+        //CalibrationLabel.text = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
     }
     
     
