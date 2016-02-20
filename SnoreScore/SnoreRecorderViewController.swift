@@ -41,14 +41,14 @@ class SnoreRecorderViewController: UIViewController {
         if(flipState == true)
         {
             //buttonState.titleLabel!.text = "Recording"
-            buttonState.setTitle("Currently Recording", forState: .Normal)
-            state.text = "Recording"
+            buttonState.setTitle("Stop Recording", forState: .Normal)
+            state.text = "Currently Recording"
         }
         if(flipState == false)
         {
             //buttonState.titleLabel?.text = "Start Recording"
             buttonState.setTitle("Start Recording", forState: .Normal)
-            state.text = "Not Recording"
+            state.text = "Currently Not Recording"
         }
     }
 
