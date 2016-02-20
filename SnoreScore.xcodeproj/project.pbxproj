@@ -12,6 +12,9 @@
 		676FB6BC1C7839980008D7DD /* SnoreRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */; };
 		676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */; };
 		676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6C11C78CE820008D7DD /* DoneViewController.swift */; };
+		D145A34D1C78E6B400056A34 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A34B1C78E6B400056A34 /* icon@2x.png */; };
+		D145A34E1C78E6B400056A34 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A34C1C78E6B400056A34 /* icon@3x.png */; };
+		D145A3501C78EFD500056A34 /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145A34F1C78EFD500056A34 /* AudioMonitor.swift */; };
 		D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */; };
 		D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9211C7816AD00DDBD1B /* Main.storyboard */; };
 		D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E9241C7816AD00DDBD1B /* Assets.xcassets */; };
@@ -91,6 +94,9 @@
 		676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnoreRecorderViewController.swift; sourceTree = "<group>"; };
 		676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		676FB6C11C78CE820008D7DD /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		D145A34B1C78E6B400056A34 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../../../Desktop/icons/icon@2x.png"; sourceTree = "<group>"; };
+		D145A34C1C78E6B400056A34 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@3x.png"; path = "../../../../Desktop/icons/icon@3x.png"; sourceTree = "<group>"; };
+		D145A34F1C78EFD500056A34 /* AudioMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		D153E91A1C7816AD00DDBD1B /* SnoreScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoreScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153E9221C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +187,8 @@
 				D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */,
 				D153E9211C7816AD00DDBD1B /* Main.storyboard */,
 				D153E9241C7816AD00DDBD1B /* Assets.xcassets */,
+				D145A34B1C78E6B400056A34 /* icon@2x.png */,
+				D145A34C1C78E6B400056A34 /* icon@3x.png */,
 				D153E9261C7816AD00DDBD1B /* LaunchScreen.storyboard */,
 				D153E9291C7816AD00DDBD1B /* Info.plist */,
 				676FB6B71C7824630008D7DD /* StartScreenViewController.swift */,
@@ -188,6 +196,7 @@
 				676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */,
 				676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */,
 				676FB6C11C78CE820008D7DD /* DoneViewController.swift */,
+				D145A34F1C78EFD500056A34 /* AudioMonitor.swift */,
 			);
 			path = SnoreScore;
 			sourceTree = "<group>";
@@ -390,6 +399,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D153E9281C7816AD00DDBD1B /* LaunchScreen.storyboard in Resources */,
+				D145A34D1C78E6B400056A34 /* icon@2x.png in Resources */,
+				D145A34E1C78E6B400056A34 /* icon@3x.png in Resources */,
 				D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */,
 				D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */,
 			);
@@ -436,6 +447,7 @@
 				676FB6BC1C7839980008D7DD /* SnoreRecorderViewController.swift in Sources */,
 				676FB6B81C7824630008D7DD /* StartScreenViewController.swift in Sources */,
 				676FB6BA1C78281F0008D7DD /* CalibratingViewController.swift in Sources */,
+				D145A3501C78EFD500056A34 /* AudioMonitor.swift in Sources */,
 				D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */,
 				676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */,
 				676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */,
