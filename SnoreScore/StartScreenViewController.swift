@@ -13,6 +13,11 @@ class StartScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NSUserDefaults.standardUserDefaults().setInteger(8, forKey: "numberTimes")
+        let logo = UIImage(named: "logo.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
         // Do any additional setup after loading the view.
     }
 
