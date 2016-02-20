@@ -47,7 +47,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate  {
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         print("lollololololololo")
         if ((message.keys.indexOf("vibrate")) != nil) {
-            self.LastHapticFeedback()
+           // self.LastHapticFeedback()
+            var timer = NSTimer()
+            timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "HapticFeedback", userInfo: nil, repeats: true)
+            timer.fire()
+            
+            WKInterfaceDevice.currentDevice().playHaptic(.Start)
         }
     }
 
