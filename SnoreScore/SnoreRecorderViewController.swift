@@ -1,17 +1,15 @@
 //
-//  CalibratingViewController.swift
+//  SnoreRecorderViewController.swift
 //  SnoreScore
 //
-//  Created by MU IT Program on 2/19/16.
+//  Created by MU IT Program on 2/20/16.
 //  Copyright © 2016 Corey Matzat. All rights reserved.
 //
 
 import UIKit
 
-class CalibratingViewController: UIViewController {
+class SnoreRecorderViewController: UIViewController {
 
-    @IBOutlet weak var CalibrationStatus: UIActivityIndicatorView!
-    @IBOutlet weak var CalibrationLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,10 +20,6 @@ class CalibratingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
     
 
     /*

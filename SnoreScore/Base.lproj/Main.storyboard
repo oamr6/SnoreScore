@@ -34,17 +34,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-8N-AZt">
-                                <rect key="frame" x="277" y="470" width="66" height="30"/>
-                                <state key="normal" title="Calibrate"/>
+                                <rect key="frame" x="267" y="471" width="66" height="30"/>
+                                <state key="normal" title="Settings"/>
                                 <connections>
                                     <action selector="Calibrate:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="Wt5-uF-Qfo"/>
+                                    <segue destination="xiI-Zm-96W" kind="show" id="RHT-Cd-TtN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-99-9TJ">
+                                <rect key="frame" x="277" y="164" width="46" height="30"/>
+                                <state key="normal" title="Start Score"/>
+                                <connections>
+                                    <segue destination="qQF-76-ps2" kind="show" id="I4e-bN-sjf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-aM-O2a">
+                                <rect key="frame" x="277" y="305" width="46" height="30"/>
+                                <state key="normal" title="Calibrate"/>
+                                <connections>
+                                    <segue destination="awH-yg-LBW" kind="show" id="nOL-a7-frF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="f8q-aM-O2a" firstAttribute="centerY" secondItem="Ynh-1s-jbK" secondAttribute="centerY" constant="20" id="9ZO-4a-CnZ"/>
+                            <constraint firstItem="W4s-99-9TJ" firstAttribute="centerX" secondItem="Ynh-1s-jbK" secondAttribute="centerX" id="Emq-7J-65B"/>
                             <constraint firstItem="tIl-8N-AZt" firstAttribute="centerX" secondItem="Ynh-1s-jbK" secondAttribute="centerX" id="Ihk-Ac-qEo"/>
-                            <constraint firstItem="eiw-Q4-wZu" firstAttribute="top" secondItem="tIl-8N-AZt" secondAttribute="bottom" constant="100" id="Pyy-cV-ngr"/>
+                            <constraint firstItem="eiw-Q4-wZu" firstAttribute="top" secondItem="tIl-8N-AZt" secondAttribute="bottom" constant="99" id="Pyy-cV-ngr"/>
+                            <constraint firstItem="f8q-aM-O2a" firstAttribute="centerX" secondItem="Ynh-1s-jbK" secondAttribute="centerX" id="gSo-wX-cvN"/>
+                            <constraint firstItem="W4s-99-9TJ" firstAttribute="top" secondItem="lfy-kq-QKN" secondAttribute="bottom" constant="100" id="ra2-q5-D9a"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KdF-Y7-3vl"/>
@@ -52,6 +71,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncR-96-iFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="336"/>
+        </scene>
+        <!--Snore Recorder View Controller-->
+        <scene sceneID="AP3-9J-Ac4">
+            <objects>
+                <viewController id="qQF-76-ps2" customClass="SnoreRecorderViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19X-qF-gso"/>
+                        <viewControllerLayoutGuide type="bottom" id="dfp-vP-cO1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kf6-cz-ugb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJy-38-ugY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="-360"/>
         </scene>
         <!--Calibrating View Controller-->
         <scene sceneID="peZ-5G-dJP">
@@ -83,10 +120,32 @@
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerY" secondItem="pCT-U5-kJT" secondAttribute="centerY" id="SsX-iS-jgb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CalibrationLabel" destination="nf4-VX-hKJ" id="ZqO-2K-8Dn"/>
+                        <outlet property="CalibrationStatus" destination="Hwx-Yw-Eb9" id="cIG-Tx-9sD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzb-wF-nIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="329"/>
+            <point key="canvasLocation" x="1462" y="329"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="E7g-s2-VC3">
+            <objects>
+                <viewController id="xiI-Zm-96W" customClass="SettingsViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UNO-Lq-dMz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1bp-Y2-QdZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6vN-g2-AIb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGs-He-WDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="1206"/>
         </scene>
     </scenes>
 </document>
