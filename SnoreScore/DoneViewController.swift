@@ -11,11 +11,24 @@ import UIKit
 class DoneViewController: UIViewController {
 
     @IBOutlet weak var snoreCountLabel: UILabel!
+    @IBOutlet weak var previousSnore: UILabel!
     var snoreCount: String?
+    var snoreCountInt: Int?
+    var box: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        snoreCountLabel.text = snoreCount
+        //NSUserDefaults.standardUserDefaults().setInteger(snoreCountInt!, forKey: "previous")
+        //if NSUserDefaults.standardUserDefaults().integerForKey("previous").value == nil{
+            
+        //}
+        //if let unwrap = box{
+       //     previousSnore.text = "0"
+       // }
+        snoreCountLabel.text = "Snore Score: " + snoreCount!
+        previousSnore.text = "Previous Score: " + NSUserDefaults.standardUserDefaults().integerForKey("previous").description
+        NSUserDefaults.standardUserDefaults().setInteger(snoreCountInt!, forKey: "previous")
         // Do any additional setup after loading the view.
     }
 
