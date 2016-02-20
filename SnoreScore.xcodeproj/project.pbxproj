@@ -12,7 +12,6 @@
 		676FB6BC1C7839980008D7DD /* SnoreRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */; };
 		676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */; };
 		676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6C11C78CE820008D7DD /* DoneViewController.swift */; };
-		D145A3501C78EFD500056A34 /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145A34F1C78EFD500056A34 /* AudioMonitor.swift */; };
 		D145A3611C790F7E00056A34 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3601C790F7E00056A34 /* logo.png */; };
 		D145A3671C79116600056A34 /* CalibrateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3641C79116600056A34 /* CalibrateButton.png */; };
 		D145A3681C79116600056A34 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3651C79116600056A34 /* SettingsButton.png */; };
@@ -96,7 +95,6 @@
 		676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnoreRecorderViewController.swift; sourceTree = "<group>"; };
 		676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		676FB6C11C78CE820008D7DD /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
-		D145A34F1C78EFD500056A34 /* AudioMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		D145A3601C790F7E00056A34 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D145A3641C79116600056A34 /* CalibrateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalibrateButton.png; sourceTree = "<group>"; };
 		D145A3651C79116600056A34 /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsButton.png; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 				676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */,
 				676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */,
 				676FB6C11C78CE820008D7DD /* DoneViewController.swift */,
-				D145A34F1C78EFD500056A34 /* AudioMonitor.swift */,
 			);
 			path = SnoreScore;
 			sourceTree = "<group>";
@@ -455,7 +452,6 @@
 				676FB6BC1C7839980008D7DD /* SnoreRecorderViewController.swift in Sources */,
 				676FB6B81C7824630008D7DD /* StartScreenViewController.swift in Sources */,
 				676FB6BA1C78281F0008D7DD /* CalibratingViewController.swift in Sources */,
-				D145A3501C78EFD500056A34 /* AudioMonitor.swift in Sources */,
 				D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */,
 				676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */,
 				676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */,

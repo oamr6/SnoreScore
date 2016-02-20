@@ -17,7 +17,7 @@ class CalibratingViewController: UIViewController {
     var baselineCalculationTimer = NSTimer()
     var speakingRecordingTimer = NSTimer()
     var speakingCalculationTimer = NSTimer()
-    var dec = 0.0
+    var decibels = 0.0
     var trials = 0.0
     var baselineThreshold = 0.0
     var speakingThreshold = 0.0
@@ -39,6 +39,7 @@ class CalibratingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func calibrating(sender: AnyObject) {
+        navigationController?.navigationBarHidden = true;
         CalibrationLabel.text = "Prepare for Microphone Calibration"
         calibrateAudio()
         //monitor = AudioMonitor()
@@ -91,14 +92,14 @@ class CalibratingViewController: UIViewController {
         recorder.updateMeters()
         
         print(recorder.averagePowerForChannel(0))
-        dec += Double(recorder.averagePowerForChannel(0))
+        decibels += Double(recorder.averagePowerForChannel(0))
         trials++
     }
     
     func calculateBaseline() {
         baselineRecordingTimer.invalidate()
-        baselineThreshold = dec / trials
-        dec = 0
+        baselineThreshold = decibels / trials
+        decibels = 0
         trials = 0
         print("Quiet average is " + String(baselineThreshold))
         NSUserDefaults.standardUserDefaults().setDouble(baselineThreshold, forKey: "baseLineRecord")
@@ -114,16 +115,18 @@ class CalibratingViewController: UIViewController {
         
         print(recorder.averagePowerForChannel(0))
         if (Double(recorder.averagePowerForChannel(0)) > baselineThreshold + (0 - baselineThreshold) * 0.05) {
-            dec += Double(recorder.averagePowerForChannel(0))
+            decibels += Double(recorder.averagePowerForChannel(0))
             trials++
         }
     }
     
     func calculateSpeaking() {
         speakingRecordingTimer.invalidate()
-        speakingThreshold = dec / trials
-        print("Speaking average is " + String(dec / trials))
+        speakingThreshold = decibels / trials
+        print("Speaking average is " + String(decibels / trials))
         NSUserDefaults.standardUserDefaults().setDouble(speakingThreshold, forKey: "speakingThresholdRecord")
+        navigationController?.navigationBarHidden = false
+        CalibrationStatus.stopAnimating()
 
     }
     

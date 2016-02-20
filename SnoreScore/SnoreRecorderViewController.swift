@@ -17,11 +17,19 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var buttonState: UIButton!
     
     var recorder: AVAudioRecorder!
-    var baselineRecordingTimer = NSTimer()
-    var baselineCalculationTimer = NSTimer()
+    var recordingTimer = NSTimer()
+    var periodTimer = NSTimer()
     
     var count = 0
     var flipState: Bool = false
+    var baseLine: Double!
+    var speakingThreshold : Double!
+    var decibels = 0.0
+    var loud = 0.0
+    var trials = 0.0
+    
+    let thresholdPercent = 0.5
+    let thresholdNumber = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +59,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             // do something
             }) { (error) -> Void in
                 //
-                print("SOMETHING HAPPENEF \(error)")
+                print("SOMETHING HAPPENED \(error)")
         }
 
         
@@ -62,6 +70,9 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func changeStatus(sender: AnyObject) {
+        
+        recordingTimer.invalidate()
+        periodTimer.invalidate()
         if(flipState == true)
         {
             flipState = false
@@ -122,18 +133,31 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         
         //instantiate a timer to be called with whatever frequency we want to grab metering values
         
-        baselineRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSound"), userInfo: nil, repeats: true)
-        baselineCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("analyzeInterval"), userInfo: nil, repeats: false)
+        recordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSound"), userInfo: nil, repeats: true)
+        periodTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("analyzeInterval"), userInfo: nil, repeats: true)
         
         
     }
     
     func recordSound() {
+        //we have to update meters before we can get the metering values
+        recorder.updateMeters()
+        //print(recorder.averagePowerForChannel(0))
         
+        if (Double(recorder.averagePowerForChannel(0)) > thresholdNumber * (speakingThreshold - baseLine) + baseLine)
+        {
+            print("Loud!")
+            loud++
+        }
+        trials++
     }
     
     func analyzeInterval() {
-        
+        if (loud / trials >= thresholdPercent) {
+            print("SNORE!")
+        }
+        loud = 0
+        trials = 0
     }
     
     

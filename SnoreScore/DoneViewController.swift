@@ -31,7 +31,8 @@ class DoneViewController: UIViewController {
     }
     
     @IBAction func goBackToStart(sender: AnyObject) {
-        navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.navigationBarHidden = false
+        navigationController?.popToRootViewControllerAnimated(false)
     }
 
     /*
