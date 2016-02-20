@@ -10,13 +10,7 @@ import UIKit
 
 class CalibratingViewController: UIViewController {
     
-    var monitor: AudioMonitor
-    
-    // MARK: Initialization
-    required init?(coder aDecoder: NSCoder) {
-        monitor = AudioMonitor()
-        super.init(coder: aDecoder)
-    }
+    var monitor: AudioMonitor!
 
     @IBOutlet weak var CalibrationStatus: UIActivityIndicatorView!
     @IBOutlet weak var CalibrationLabel: UILabel!
@@ -25,7 +19,7 @@ class CalibratingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CalibrationStatus.hidden = true
-        monitor.startMonitor()
+        monitor = AudioMonitor()
 
         // Do any additional setup after loading the view.
     }
@@ -36,9 +30,14 @@ class CalibratingViewController: UIViewController {
     }
     @IBAction func calibrating(sender: AnyObject) {
         CalibrationLabel.text = "Prepare for Microphone Calibration"
+        monitor.startMonitor()
         CalibrationStatus.hidden = false
         CalibrationStatus.startAnimating()
         CalButton.enabled = false
+    }
+    
+    func monitorTimer(timer:NSTimer) {
+        monitor.monitorTimerCallback()
     }
     
     

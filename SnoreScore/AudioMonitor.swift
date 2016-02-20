@@ -44,7 +44,7 @@ class AudioMonitor {
         recorder.meteringEnabled = true
         
         // Instantiate a timer to be called with whatever frequency we want to grab metering values
-        monitorTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("monitorTimerCallback"), userInfo: nil, repeats: true)
+        monitorTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "monitorTimer:", userInfo: nil, repeats: true)
         
     }
     
