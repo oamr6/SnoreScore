@@ -5,6 +5,50 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D153E9411C7816AD00DDBD1B"
+               BuildableName = "SnoreScore WatchKit App.app"
+               BlueprintName = "SnoreScore WatchKit App"
+               ReferencedContainer = "container:SnoreScore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D153E9501C7816AD00DDBD1B"
+               BuildableName = "SnoreScore WatchKit Extension.appex"
+               BlueprintName = "SnoreScore WatchKit Extension"
+               ReferencedContainer = "container:SnoreScore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D153E9191C7816AD00DDBD1B"
+               BuildableName = "SnoreScore.app"
+               BlueprintName = "SnoreScore"
+               ReferencedContainer = "container:SnoreScore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -13,6 +57,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D153E9411C7816AD00DDBD1B"
+            BuildableName = "SnoreScore WatchKit App.app"
+            BlueprintName = "SnoreScore WatchKit App"
+            ReferencedContainer = "container:SnoreScore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +79,27 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/SnoreScore WatchKit App">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D153E9411C7816AD00DDBD1B"
+            BuildableName = "SnoreScore WatchKit App.app"
+            BlueprintName = "SnoreScore WatchKit App"
+            ReferencedContainer = "container:SnoreScore.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D153E9411C7816AD00DDBD1B"
+            BuildableName = "SnoreScore WatchKit App.app"
+            BlueprintName = "SnoreScore WatchKit App"
+            ReferencedContainer = "container:SnoreScore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +109,27 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/SnoreScore WatchKit App">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D153E9411C7816AD00DDBD1B"
+            BuildableName = "SnoreScore WatchKit App.app"
+            BlueprintName = "SnoreScore WatchKit App"
+            ReferencedContainer = "container:SnoreScore.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D153E9411C7816AD00DDBD1B"
+            BuildableName = "SnoreScore WatchKit App.app"
+            BlueprintName = "SnoreScore WatchKit App"
+            ReferencedContainer = "container:SnoreScore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
