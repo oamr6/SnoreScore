@@ -25,7 +25,6 @@
 		D153E95B1C7816AD00DDBD1B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E95A1C7816AD00DDBD1B /* ExtensionDelegate.swift */; };
 		D153E95D1C7816AD00DDBD1B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E95C1C7816AD00DDBD1B /* NotificationController.swift */; };
 		D153E95F1C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E95E1C7816AD00DDBD1B /* Assets.xcassets */; };
-		D153E9D81C78328800DDBD1B /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E9D71C78328800DDBD1B /* AudioController.swift */; };
 		D153E9DC1C7833F800DDBD1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D153E9DB1C7833F800DDBD1B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,9 +112,7 @@
 		D153E95C1C7816AD00DDBD1B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D153E95E1C7816AD00DDBD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D153E9601C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D153E9D71C78328800DDBD1B /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		D153E9DB1C7833F800DDBD1B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D153E9DD1C78350600DDBD1B /* AudioPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AudioPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
