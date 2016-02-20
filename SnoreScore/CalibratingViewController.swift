@@ -13,10 +13,14 @@ class CalibratingViewController: UIViewController {
     
     //var monitor: AudioMonitor!
     var recorder: AVAudioRecorder!
-    var timer = NSTimer()
-    var timer2 = NSTimer()
+    var baselineRecordingTimer = NSTimer()
+    var baselineCalculationTimer = NSTimer()
+    var speakingRecordingTimer = NSTimer()
+    var speakingCalculationTimer = NSTimer()
     var dec = 0.0
     var trials = 0.0
+    var baselineThreshold = 0.0
+    var speakingThreshold = 0.0
 
     @IBOutlet weak var CalibrationStatus: UIActivityIndicatorView!
     @IBOutlet weak var CalibrationLabel: UILabel!
@@ -36,14 +40,14 @@ class CalibratingViewController: UIViewController {
     }
     @IBAction func calibrating(sender: AnyObject) {
         CalibrationLabel.text = "Prepare for Microphone Calibration"
-        setupAudioRecorder()
+        calibrateAudio()
         //monitor = AudioMonitor()
         CalibrationStatus.startAnimating()
         CalButton.enabled = false
         //CalibrationLabel.text = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
     }
     
-    func setupAudioRecorder() {
+    func calibrateAudio() {
         // Make an AudioSession, set it to PlayAndRecord and make it active
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         do {
@@ -75,28 +79,49 @@ class CalibratingViewController: UIViewController {
         
         //instantiate a timer to be called with whatever frequency we want to grab metering values
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
-        timer2 = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("readQuiet"), userInfo: nil, repeats: false)
+        baselineRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordBaseline"), userInfo: nil, repeats: true)
+        baselineCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("calculateBaseline"), userInfo: nil, repeats: false)
         
         
     }
     
     
-    func levelTimerCallback() {
+    func recordBaseline() {
         //we have to update meters before we can get the metering values
         recorder.updateMeters()
         
         print(recorder.averagePowerForChannel(0))
-        print(recorder.peakPowerForChannel(0))
-        print("")
         dec += Double(recorder.averagePowerForChannel(0))
         trials++
     }
     
-    func readQuiet() {
-        timer.invalidate()
-        print("Quiet average is " + String(dec / trials))
+    func calculateBaseline() {
+        baselineRecordingTimer.invalidate()
+        baselineThreshold = dec / trials
+        dec = 0
+        trials = 0
+        print("Quiet average is " + String(baselineThreshold))
+        speakingRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSpeaking"), userInfo: nil, repeats: true)
+        speakingCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("calculateSpeaking"), userInfo: nil, repeats: false)
+
         
+    }
+    
+    func recordSpeaking() {
+        //we have to update meters before we can get the metering values
+        recorder.updateMeters()
+        
+        print(recorder.averagePowerForChannel(0))
+        if (Double(recorder.averagePowerForChannel(0)) > baselineThreshold + (0 - baselineThreshold) * 0.05) {
+            dec += Double(recorder.averagePowerForChannel(0))
+            trials++
+        }
+    }
+    
+    func calculateSpeaking() {
+        speakingRecordingTimer.invalidate()
+        speakingThreshold = dec / trials
+        print("Quiet average is " + String(dec / trials))
     }
     
     
