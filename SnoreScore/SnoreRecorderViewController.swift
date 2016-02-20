@@ -13,6 +13,8 @@ class SnoreRecorderViewController: UIViewController {
     @IBOutlet weak var state: UILabel!
     @IBOutlet weak var buttonState: UIButton!
     
+    
+    var count = 0
     var flipState: Bool = false
     
     override func viewDidLoad() {
@@ -51,6 +53,18 @@ class SnoreRecorderViewController: UIViewController {
             state.text = "Currently Not Recording"
         }
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if flipState == false
+        {
+            if let viewController = segue.destinationViewController as? DoneViewController
+            {
+                print(count.description)
+                viewController.snoreCount = count.description
+            }
+        }
+    }
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -62,4 +76,3 @@ class SnoreRecorderViewController: UIViewController {
     }
     */
 
-}

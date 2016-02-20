@@ -11,6 +11,7 @@
 		676FB6BA1C78281F0008D7DD /* CalibratingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6B91C78281F0008D7DD /* CalibratingViewController.swift */; };
 		676FB6BC1C7839980008D7DD /* SnoreRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */; };
 		676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */; };
+		676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6C11C78CE820008D7DD /* DoneViewController.swift */; };
 		D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */; };
 		D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9211C7816AD00DDBD1B /* Main.storyboard */; };
 		D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E9241C7816AD00DDBD1B /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		676FB6B91C78281F0008D7DD /* CalibratingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibratingViewController.swift; sourceTree = "<group>"; };
 		676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnoreRecorderViewController.swift; sourceTree = "<group>"; };
 		676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		676FB6C11C78CE820008D7DD /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
 		D153E91A1C7816AD00DDBD1B /* SnoreScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoreScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153E9221C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				676FB6B91C78281F0008D7DD /* CalibratingViewController.swift */,
 				676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */,
 				676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */,
+				676FB6C11C78CE820008D7DD /* DoneViewController.swift */,
 			);
 			path = SnoreScore;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				676FB6B81C7824630008D7DD /* StartScreenViewController.swift in Sources */,
 				676FB6BA1C78281F0008D7DD /* CalibratingViewController.swift in Sources */,
 				D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */,
+				676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */,
 				676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
