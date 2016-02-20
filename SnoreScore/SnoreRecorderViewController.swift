@@ -141,7 +141,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func analyzeInterval() {
-        if (loud / trials > thresholdPercent) {
+        if (loud / trials >= thresholdPercent) {
             print("SNORE!")
         }
         loud = 0
