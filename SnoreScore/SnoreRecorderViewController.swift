@@ -17,7 +17,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     
     
-    var count = 0
+    var count = 5
     var flipState: Bool = false
     
     override func viewDidLoad() {
@@ -36,6 +36,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         buttonState.setTitle("Stop Recording", forState: .Normal)
         state.text = "Currently Recording"
         // Do any additional setup after loading the view.
+        NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "numberTimes")
     }
 
   
@@ -65,7 +66,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
                 if let viewController = segue.destinationViewController as? DoneViewController
                     {
-                        viewController.snoreCount = count.description
+                        viewController.snoreCount = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
+                        viewController.snoreCountInt = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
                     }
                 }
 }

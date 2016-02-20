@@ -265,9 +265,17 @@
                                     <action selector="goBackToStart:" destination="fFG-RX-Km7" eventType="touchUpInside" id="i9v-iQ-LyC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJl-an-knQ">
+                                <rect key="frame" x="279" y="332" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iJl-an-knQ" firstAttribute="centerX" secondItem="bVE-he-Qge" secondAttribute="centerX" id="OHX-P4-M0n"/>
+                            <constraint firstItem="iJl-an-knQ" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="21" id="Xj5-Wh-H1F"/>
                             <constraint firstItem="bVE-he-Qge" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="aYf-zx-juC"/>
                             <constraint firstItem="MUC-0F-RJE" firstAttribute="centerX" secondItem="bVE-he-Qge" secondAttribute="centerX" id="d30-d9-K0c"/>
                             <constraint firstItem="MUC-0F-RJE" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="50" id="hcK-xV-l7C"/>
@@ -275,6 +283,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="previousSnore" destination="iJl-an-knQ" id="1Qc-dh-klu"/>
                         <outlet property="snoreCountLabel" destination="bVE-he-Qge" id="yHO-g7-xf0"/>
                     </connections>
                 </viewController>

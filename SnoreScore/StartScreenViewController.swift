@@ -12,7 +12,7 @@ class StartScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSUserDefaults.standardUserDefaults().setInteger(8, forKey: "numberTimes")
+        
         // Do any additional setup after loading the view.
     }
 
