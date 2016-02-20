@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bSK-oH-jiM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bSK-oH-jiM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -228,6 +228,48 @@
             </objects>
             <point key="canvasLocation" x="598" y="1118"/>
         </scene>
+        <!--Done View Controller-->
+        <scene sceneID="ZO9-TZ-gdl">
+            <objects>
+                <viewController id="fFG-RX-Km7" customClass="DoneViewController" customModule="SnoreScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xau-sU-oRk"/>
+                        <viewControllerLayoutGuide type="bottom" id="yxW-6H-lJJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ta-qw-8tp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVE-he-Qge">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUC-0F-RJE">
+                                <rect key="frame" x="261" y="361" width="79" height="30"/>
+                                <state key="normal" title="Go To Start"/>
+                                <connections>
+                                    <action selector="goBackToStart:" destination="fFG-RX-Km7" eventType="touchUpInside" id="i9v-iQ-LyC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bVE-he-Qge" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="aYf-zx-juC"/>
+                            <constraint firstItem="MUC-0F-RJE" firstAttribute="centerX" secondItem="bVE-he-Qge" secondAttribute="centerX" id="d30-d9-K0c"/>
+                            <constraint firstItem="MUC-0F-RJE" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="50" id="hcK-xV-l7C"/>
+                            <constraint firstItem="bVE-he-Qge" firstAttribute="centerY" secondItem="9ta-qw-8tp" secondAttribute="centerY" id="o1L-Zp-d8T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="snoreCountLabel" destination="bVE-he-Qge" id="yHO-g7-xf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5o-Cm-qnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418" y="-485"/>
+        </scene>
         <!--Snore Recorder View Controller-->
         <scene sceneID="AP3-9J-Ac4">
             <objects>
@@ -251,6 +293,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="changeStatus:" destination="qQF-76-ps2" eventType="touchUpInside" id="Shh-ul-86T"/>
+                                    <segue destination="fFG-RX-Km7" kind="show" id="7az-F6-vzM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -269,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJy-38-ugY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-360"/>
+            <point key="canvasLocation" x="598" y="-453"/>
         </scene>
         <!--Calibrating View Controller-->
         <scene sceneID="peZ-5G-dJP">
@@ -324,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzb-wF-nIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1572" y="383"/>
+            <point key="canvasLocation" x="1374" y="336"/>
         </scene>
     </scenes>
 </document>
