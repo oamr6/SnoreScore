@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Notification - SnoreScore WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SnoreScore WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SnoreScore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D153E9191C7816AD00DDBD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D153E92D1C7816AD00DDBD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D153E9381C7816AD00DDBD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D153E9411C7816AD00DDBD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

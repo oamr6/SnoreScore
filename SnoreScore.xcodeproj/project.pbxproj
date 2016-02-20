@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */; };
+		D153E9201C7816AD00DDBD1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91F1C7816AD00DDBD1B /* ViewController.swift */; };
+		D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9211C7816AD00DDBD1B /* Main.storyboard */; };
+		D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E9241C7816AD00DDBD1B /* Assets.xcassets */; };
+		D153E9281C7816AD00DDBD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9261C7816AD00DDBD1B /* LaunchScreen.storyboard */; };
+		D153E9331C7816AD00DDBD1B /* SnoreScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E9321C7816AD00DDBD1B /* SnoreScoreTests.swift */; };
+		D153E93E1C7816AD00DDBD1B /* SnoreScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E93D1C7816AD00DDBD1B /* SnoreScoreUITests.swift */; };
+		D153E9431C7816AD00DDBD1B /* SnoreScore WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D153E9421C7816AD00DDBD1B /* SnoreScore WatchKit App.app */; };
+		D153E9491C7816AD00DDBD1B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9471C7816AD00DDBD1B /* Interface.storyboard */; };
+		D153E94B1C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E94A1C7816AD00DDBD1B /* Assets.xcassets */; };
+		D153E9521C7816AD00DDBD1B /* SnoreScore WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D153E9511C7816AD00DDBD1B /* SnoreScore WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D153E9591C7816AD00DDBD1B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E9581C7816AD00DDBD1B /* InterfaceController.swift */; };
+		D153E95B1C7816AD00DDBD1B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E95A1C7816AD00DDBD1B /* ExtensionDelegate.swift */; };
+		D153E95D1C7816AD00DDBD1B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E95C1C7816AD00DDBD1B /* NotificationController.swift */; };
+		D153E95F1C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E95E1C7816AD00DDBD1B /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D153E92F1C7816AD00DDBD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D153E9121C7816AD00DDBD1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D153E9191C7816AD00DDBD1B;
+			remoteInfo = SnoreScore;
+		};
+		D153E93A1C7816AD00DDBD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D153E9121C7816AD00DDBD1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D153E9191C7816AD00DDBD1B;
+			remoteInfo = SnoreScore;
+		};
+		D153E9441C7816AD00DDBD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D153E9121C7816AD00DDBD1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D153E9411C7816AD00DDBD1B;
+			remoteInfo = "SnoreScore WatchKit App";
+		};
+		D153E9531C7816AD00DDBD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D153E9121C7816AD00DDBD1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D153E9501C7816AD00DDBD1B;
+			remoteInfo = "SnoreScore WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D153E9661C7816AD00DDBD1B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D153E9521C7816AD00DDBD1B /* SnoreScore WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E96A1C7816AD00DDBD1B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D153E9431C7816AD00DDBD1B /* SnoreScore WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D153E91A1C7816AD00DDBD1B /* SnoreScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoreScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D153E91F1C7816AD00DDBD1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D153E9221C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D153E9241C7816AD00DDBD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D153E9271C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D153E9291C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D153E92E1C7816AD00DDBD1B /* SnoreScoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnoreScoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D153E9321C7816AD00DDBD1B /* SnoreScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoreScoreTests.swift; sourceTree = "<group>"; };
+		D153E9341C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D153E9391C7816AD00DDBD1B /* SnoreScoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnoreScoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D153E93D1C7816AD00DDBD1B /* SnoreScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoreScoreUITests.swift; sourceTree = "<group>"; };
+		D153E93F1C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D153E9421C7816AD00DDBD1B /* SnoreScore WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SnoreScore WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D153E9481C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D153E94A1C7816AD00DDBD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D153E94C1C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D153E9511C7816AD00DDBD1B /* SnoreScore WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SnoreScore WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D153E9571C7816AD00DDBD1B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D153E9581C7816AD00DDBD1B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D153E95A1C7816AD00DDBD1B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D153E95C1C7816AD00DDBD1B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D153E95E1C7816AD00DDBD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D153E9601C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D153E9171C7816AD00DDBD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E92B1C7816AD00DDBD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E9361C7816AD00DDBD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E94E1C7816AD00DDBD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D153E9111C7816AD00DDBD1B = {
+			isa = PBXGroup;
+			children = (
+				D153E91C1C7816AD00DDBD1B /* SnoreScore */,
+				D153E9311C7816AD00DDBD1B /* SnoreScoreTests */,
+				D153E93C1C7816AD00DDBD1B /* SnoreScoreUITests */,
+				D153E9461C7816AD00DDBD1B /* SnoreScore WatchKit App */,
+				D153E9551C7816AD00DDBD1B /* SnoreScore WatchKit Extension */,
+				D153E91B1C7816AD00DDBD1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D153E91B1C7816AD00DDBD1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D153E91A1C7816AD00DDBD1B /* SnoreScore.app */,
+				D153E92E1C7816AD00DDBD1B /* SnoreScoreTests.xctest */,
+				D153E9391C7816AD00DDBD1B /* SnoreScoreUITests.xctest */,
+				D153E9421C7816AD00DDBD1B /* SnoreScore WatchKit App.app */,
+				D153E9511C7816AD00DDBD1B /* SnoreScore WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D153E91C1C7816AD00DDBD1B /* SnoreScore */ = {
+			isa = PBXGroup;
+			children = (
+				D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */,
+				D153E91F1C7816AD00DDBD1B /* ViewController.swift */,
+				D153E9211C7816AD00DDBD1B /* Main.storyboard */,
+				D153E9241C7816AD00DDBD1B /* Assets.xcassets */,
+				D153E9261C7816AD00DDBD1B /* LaunchScreen.storyboard */,
+				D153E9291C7816AD00DDBD1B /* Info.plist */,
+			);
+			path = SnoreScore;
+			sourceTree = "<group>";
+		};
+		D153E9311C7816AD00DDBD1B /* SnoreScoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				D153E9321C7816AD00DDBD1B /* SnoreScoreTests.swift */,
+				D153E9341C7816AD00DDBD1B /* Info.plist */,
+			);
+			path = SnoreScoreTests;
+			sourceTree = "<group>";
+		};
+		D153E93C1C7816AD00DDBD1B /* SnoreScoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D153E93D1C7816AD00DDBD1B /* SnoreScoreUITests.swift */,
+				D153E93F1C7816AD00DDBD1B /* Info.plist */,
+			);
+			path = SnoreScoreUITests;
+			sourceTree = "<group>";
+		};
+		D153E9461C7816AD00DDBD1B /* SnoreScore WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D153E9471C7816AD00DDBD1B /* Interface.storyboard */,
+				D153E94A1C7816AD00DDBD1B /* Assets.xcassets */,
+				D153E94C1C7816AD00DDBD1B /* Info.plist */,
+			);
+			path = "SnoreScore WatchKit App";
+			sourceTree = "<group>";
+		};
+		D153E9551C7816AD00DDBD1B /* SnoreScore WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D153E9581C7816AD00DDBD1B /* InterfaceController.swift */,
+				D153E95A1C7816AD00DDBD1B /* ExtensionDelegate.swift */,
+				D153E95C1C7816AD00DDBD1B /* NotificationController.swift */,
+				D153E95E1C7816AD00DDBD1B /* Assets.xcassets */,
+				D153E9601C7816AD00DDBD1B /* Info.plist */,
+				D153E9561C7816AD00DDBD1B /* Supporting Files */,
+			);
+			path = "SnoreScore WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D153E9561C7816AD00DDBD1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D153E9571C7816AD00DDBD1B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D153E9191C7816AD00DDBD1B /* SnoreScore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D153E96B1C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore" */;
+			buildPhases = (
+				D153E9161C7816AD00DDBD1B /* Sources */,
+				D153E9171C7816AD00DDBD1B /* Frameworks */,
+				D153E9181C7816AD00DDBD1B /* Resources */,
+				D153E96A1C7816AD00DDBD1B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D153E9451C7816AD00DDBD1B /* PBXTargetDependency */,
+			);
+			name = SnoreScore;
+			productName = SnoreScore;
+			productReference = D153E91A1C7816AD00DDBD1B /* SnoreScore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D153E92D1C7816AD00DDBD1B /* SnoreScoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D153E96E1C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScoreTests" */;
+			buildPhases = (
+				D153E92A1C7816AD00DDBD1B /* Sources */,
+				D153E92B1C7816AD00DDBD1B /* Frameworks */,
+				D153E92C1C7816AD00DDBD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D153E9301C7816AD00DDBD1B /* PBXTargetDependency */,
+			);
+			name = SnoreScoreTests;
+			productName = SnoreScoreTests;
+			productReference = D153E92E1C7816AD00DDBD1B /* SnoreScoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D153E9381C7816AD00DDBD1B /* SnoreScoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D153E9711C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScoreUITests" */;
+			buildPhases = (
+				D153E9351C7816AD00DDBD1B /* Sources */,
+				D153E9361C7816AD00DDBD1B /* Frameworks */,
+				D153E9371C7816AD00DDBD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D153E93B1C7816AD00DDBD1B /* PBXTargetDependency */,
+			);
+			name = SnoreScoreUITests;
+			productName = SnoreScoreUITests;
+			productReference = D153E9391C7816AD00DDBD1B /* SnoreScoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D153E9411C7816AD00DDBD1B /* SnoreScore WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D153E9671C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore WatchKit App" */;
+			buildPhases = (
+				D153E9401C7816AD00DDBD1B /* Resources */,
+				D153E9661C7816AD00DDBD1B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D153E9541C7816AD00DDBD1B /* PBXTargetDependency */,
+			);
+			name = "SnoreScore WatchKit App";
+			productName = "SnoreScore WatchKit App";
+			productReference = D153E9421C7816AD00DDBD1B /* SnoreScore WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D153E9501C7816AD00DDBD1B /* SnoreScore WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D153E9631C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore WatchKit Extension" */;
+			buildPhases = (
+				D153E94D1C7816AD00DDBD1B /* Sources */,
+				D153E94E1C7816AD00DDBD1B /* Frameworks */,
+				D153E94F1C7816AD00DDBD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SnoreScore WatchKit Extension";
+			productName = "SnoreScore WatchKit Extension";
+			productReference = D153E9511C7816AD00DDBD1B /* SnoreScore WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D153E9121C7816AD00DDBD1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Corey Matzat";
+				TargetAttributes = {
+					D153E9191C7816AD00DDBD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D153E92D1C7816AD00DDBD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D153E9191C7816AD00DDBD1B;
+					};
+					D153E9381C7816AD00DDBD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D153E9191C7816AD00DDBD1B;
+					};
+					D153E9411C7816AD00DDBD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D153E9501C7816AD00DDBD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D153E9151C7816AD00DDBD1B /* Build configuration list for PBXProject "SnoreScore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D153E9111C7816AD00DDBD1B;
+			productRefGroup = D153E91B1C7816AD00DDBD1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D153E9191C7816AD00DDBD1B /* SnoreScore */,
+				D153E92D1C7816AD00DDBD1B /* SnoreScoreTests */,
+				D153E9381C7816AD00DDBD1B /* SnoreScoreUITests */,
+				D153E9411C7816AD00DDBD1B /* SnoreScore WatchKit App */,
+				D153E9501C7816AD00DDBD1B /* SnoreScore WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D153E9181C7816AD00DDBD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E9281C7816AD00DDBD1B /* LaunchScreen.storyboard in Resources */,
+				D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */,
+				D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E92C1C7816AD00DDBD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E9371C7816AD00DDBD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E9401C7816AD00DDBD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E94B1C7816AD00DDBD1B /* Assets.xcassets in Resources */,
+				D153E9491C7816AD00DDBD1B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E94F1C7816AD00DDBD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E95F1C7816AD00DDBD1B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D153E9161C7816AD00DDBD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E9201C7816AD00DDBD1B /* ViewController.swift in Sources */,
+				D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E92A1C7816AD00DDBD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E9331C7816AD00DDBD1B /* SnoreScoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E9351C7816AD00DDBD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E93E1C7816AD00DDBD1B /* SnoreScoreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D153E94D1C7816AD00DDBD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D153E95D1C7816AD00DDBD1B /* NotificationController.swift in Sources */,
+				D153E95B1C7816AD00DDBD1B /* ExtensionDelegate.swift in Sources */,
+				D153E9591C7816AD00DDBD1B /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D153E9301C7816AD00DDBD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D153E9191C7816AD00DDBD1B /* SnoreScore */;
+			targetProxy = D153E92F1C7816AD00DDBD1B /* PBXContainerItemProxy */;
+		};
+		D153E93B1C7816AD00DDBD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D153E9191C7816AD00DDBD1B /* SnoreScore */;
+			targetProxy = D153E93A1C7816AD00DDBD1B /* PBXContainerItemProxy */;
+		};
+		D153E9451C7816AD00DDBD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D153E9411C7816AD00DDBD1B /* SnoreScore WatchKit App */;
+			targetProxy = D153E9441C7816AD00DDBD1B /* PBXContainerItemProxy */;
+		};
+		D153E9541C7816AD00DDBD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D153E9501C7816AD00DDBD1B /* SnoreScore WatchKit Extension */;
+			targetProxy = D153E9531C7816AD00DDBD1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D153E9211C7816AD00DDBD1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D153E9221C7816AD00DDBD1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D153E9261C7816AD00DDBD1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D153E9271C7816AD00DDBD1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D153E9471C7816AD00DDBD1B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D153E9481C7816AD00DDBD1B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D153E9611C7816AD00DDBD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D153E9621C7816AD00DDBD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D153E9641C7816AD00DDBD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SnoreScore WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScore.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		D153E9651C7816AD00DDBD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SnoreScore WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScore.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		D153E9681C7816AD00DDBD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SnoreScore_WatchKit_Extension;
+				INFOPLIST_FILE = "SnoreScore WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScore.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		D153E9691C7816AD00DDBD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SnoreScore_WatchKit_Extension;
+				INFOPLIST_FILE = "SnoreScore WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScore.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		D153E96C1C7816AD00DDBD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SnoreScore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D153E96D1C7816AD00DDBD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SnoreScore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D153E96F1C7816AD00DDBD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SnoreScoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnoreScore.app/SnoreScore";
+			};
+			name = Debug;
+		};
+		D153E9701C7816AD00DDBD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SnoreScoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnoreScore.app/SnoreScore";
+			};
+			name = Release;
+		};
+		D153E9721C7816AD00DDBD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SnoreScoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SnoreScore;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D153E9731C7816AD00DDBD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SnoreScoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreymatzat.SnoreScoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SnoreScore;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D153E9151C7816AD00DDBD1B /* Build configuration list for PBXProject "SnoreScore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D153E9611C7816AD00DDBD1B /* Debug */,
+				D153E9621C7816AD00DDBD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D153E9631C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D153E9641C7816AD00DDBD1B /* Debug */,
+				D153E9651C7816AD00DDBD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D153E9671C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D153E9681C7816AD00DDBD1B /* Debug */,
+				D153E9691C7816AD00DDBD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D153E96B1C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D153E96C1C7816AD00DDBD1B /* Debug */,
+				D153E96D1C7816AD00DDBD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D153E96E1C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D153E96F1C7816AD00DDBD1B /* Debug */,
+				D153E9701C7816AD00DDBD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D153E9711C7816AD00DDBD1B /* Build configuration list for PBXNativeTarget "SnoreScoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D153E9721C7816AD00DDBD1B /* Debug */,
+				D153E9731C7816AD00DDBD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D153E9121C7816AD00DDBD1B /* Project object */;
+}
