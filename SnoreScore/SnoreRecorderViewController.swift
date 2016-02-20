@@ -22,6 +22,11 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     var count = 0
     var flipState: Bool = false
+    var baseLine: Double!
+    var speakingThreshold : Double!
+    
+    let thresholdPercent = 0.5
+    let thresholdNumber = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +83,6 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func startAudio() {
-        var baseLine: Double!
-        var speakingThreshold : Double!
         baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
         speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
         // Make an AudioSession, set it to PlayAndRecord and make it active
