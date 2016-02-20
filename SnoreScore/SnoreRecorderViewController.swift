@@ -33,9 +33,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             session.activateSession()
         }
         buttonState.enabled = true
-        buttonState.setTitle("Start Recording", forState: .Normal)
-        buttonState.titleLabel?.text = "Start Recording"
-        state.text = "Press Start Recording"
+        buttonState.setTitle("Stop Recording", forState: .Normal)
+        state.text = "Currently Recording"
         // Do any additional setup after loading the view.
     }
 
@@ -59,36 +58,18 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         if(flipState == true)
         {
             flipState = false
-        }
-        else
-        {
-            flipState = true
-        }
-        if(flipState == true)
-        {
-            //buttonState.titleLabel!.text = "Recording"
-            buttonState.setTitle("Stop Recording", forState: .Normal)
-            state.text = "Currently Recording"
-        }
-        if(flipState == false)
-        {
-            //buttonState.titleLabel?.text = "Start Recording"
-            buttonState.setTitle("Start Recording", forState: .Normal)
-            state.text = "Currently Not Recording"
+            buttonState.setTitle("Done Recording", forState: .Normal)
+            state.text = "Displaying Recording Recording"
         }
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if flipState == false
-        {
-            if let viewController = segue.destinationViewController as? DoneViewController
-            {
-                print(count.description)
-                viewController.snoreCount = count.description
-            }
-        }
-    }
-        
-    }
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                if let viewController = segue.destinationViewController as? DoneViewController
+                    {
+                        viewController.snoreCount = count.description
+                    }
+                }
+}
+
 
     /*
     // MARK: - Navigation
