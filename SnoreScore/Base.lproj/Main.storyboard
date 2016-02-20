@@ -186,9 +186,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hoQ-yU-1eh">
-                                            <rect key="frame" x="380" y="49" width="204" height="31"/>
+                                            <rect key="frame" x="480" y="49" width="104" height="31"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="200" id="U23-tX-9cK"/>
+                                                <constraint firstAttribute="width" constant="100" id="U23-tX-9cK"/>
                                             </constraints>
                                             <connections>
                                                 <action selector="alertFrequencySlideState:" destination="7WX-AG-bO5" eventType="valueChanged" id="brd-7x-hii"/>
