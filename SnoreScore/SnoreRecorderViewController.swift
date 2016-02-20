@@ -70,6 +70,9 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func changeStatus(sender: AnyObject) {
+        
+        recordingTimer.invalidate()
+        periodTimer.invalidate()
         if(flipState == true)
         {
             flipState = false
@@ -79,8 +82,6 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        recordingTimer.invalidate()
-        periodTimer.invalidate()
         if let viewController = segue.destinationViewController as? DoneViewController {
                 viewController.snoreCount = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
                 viewController.snoreCountInt = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
