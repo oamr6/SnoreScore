@@ -142,7 +142,7 @@ class WatchVibration: UITableViewCell
     @IBOutlet weak var watchVibrationAlertSwitch: UISwitch!
     @IBAction func watchVibrationAlertStateChange(sender: AnyObject)
     {
-        
+      //  NSUserDefaults.standardUserDefaults().setValue(watchVibrationAlertSwitch, forKey: "VibrationAlert")
     }
     
 }
@@ -151,7 +151,7 @@ class AlertFrequency: UITableViewCell
     @IBOutlet weak var alertFrequencySlider: UISlider!
     @IBAction func alertFrequencySlideState(sender: AnyObject)
     {
-        
+        //NSUserDefaults.standardUserDefaults().setFloat(alertFrequencySlider.value, forKey: "FrequencyAlert")
     }
     
 }
