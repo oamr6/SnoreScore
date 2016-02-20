@@ -16,6 +16,8 @@ class DoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         snoreCountLabel.text = snoreCount
+        navigationController?.navigationBarHidden = true
+        navigationController?.navigationItem.backBarButtonItem?.enabled = false
         // Do any additional setup after loading the view.
     }
 
