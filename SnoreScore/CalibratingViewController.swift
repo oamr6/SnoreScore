@@ -121,7 +121,7 @@ class CalibratingViewController: UIViewController {
     func calculateSpeaking() {
         speakingRecordingTimer.invalidate()
         speakingThreshold = dec / trials
-        print("Quiet average is " + String(dec / trials))
+        print("Speaking average is " + String(dec / trials))
     }
     
     
