@@ -14,6 +14,9 @@ class CalibratingViewController: UIViewController {
     //var monitor: AudioMonitor!
     var recorder: AVAudioRecorder!
     var timer = NSTimer()
+    var timer2 = NSTimer()
+    var dec = 0.0
+    var trials = 0.0
 
     @IBOutlet weak var CalibrationStatus: UIActivityIndicatorView!
     @IBOutlet weak var CalibrationLabel: UILabel!
@@ -71,7 +74,8 @@ class CalibratingViewController: UIViewController {
         
         //instantiate a timer to be called with whatever frequency we want to grab metering values
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("levelTimerCallback"), userInfo: nil, repeats: true)
+        timer2 = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("readQuiet"), userInfo: nil, repeats: false)
         
         
     }
@@ -84,6 +88,14 @@ class CalibratingViewController: UIViewController {
         print(recorder.averagePowerForChannel(0))
         print(recorder.peakPowerForChannel(0))
         print("")
+        dec += Double(recorder.averagePowerForChannel(0))
+        trials++
+    }
+    
+    func readQuiet() {
+        timer.invalidate()
+        print("Quiet average is " + String(dec / trials))
+        
     }
     
     
