@@ -39,6 +39,7 @@ class CalibratingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func calibrating(sender: AnyObject) {
+        navigationController?.navigationBarHidden = true;
         CalibrationLabel.text = "Prepare for Microphone Calibration"
         calibrateAudio()
         //monitor = AudioMonitor()
@@ -124,6 +125,8 @@ class CalibratingViewController: UIViewController {
         speakingThreshold = dec / trials
         print("Speaking average is " + String(dec / trials))
         NSUserDefaults.standardUserDefaults().setDouble(speakingThreshold, forKey: "speakingThresholdRecord")
+        navigationController?.navigationBarHidden = false
+        CalibrationStatus.stopAnimating()
 
     }
     
