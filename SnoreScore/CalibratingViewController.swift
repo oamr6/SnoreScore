@@ -40,6 +40,7 @@ class CalibratingViewController: UIViewController {
         //monitor = AudioMonitor()
         CalibrationStatus.startAnimating()
         CalButton.enabled = false
+        //CalibrationLabel.text = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
     }
     
     func setupAudioRecorder() {
