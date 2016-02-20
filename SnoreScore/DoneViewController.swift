@@ -11,7 +11,11 @@ import UIKit
 class DoneViewController: UIViewController {
 
     @IBOutlet weak var snoreCountLabel: UILabel!
+    @IBOutlet weak var previousSnore: UILabel!
     var snoreCount: String?
+    var snoreCountInt: Int?
+    var box: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

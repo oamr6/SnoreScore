@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import AVFoundation
 
 class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
 
@@ -15,7 +16,9 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var state: UILabel!
     @IBOutlet weak var buttonState: UIButton!
     
-    
+    var recorder: AVAudioRecorder!
+    var baselineRecordingTimer = NSTimer()
+    var baselineCalculationTimer = NSTimer()
     
     var count = 0
     var flipState: Bool = false
@@ -35,7 +38,11 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         buttonState.enabled = true
         buttonState.setTitle("Stop Recording", forState: .Normal)
         state.text = "Currently Recording"
+        
+        startAudio()
+        
         // Do any additional setup after loading the view.
+        NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "numberTimes")
     }
 
   
@@ -62,12 +69,65 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             state.text = "Displaying Recording Recording"
         }
     }
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-                if let viewController = segue.destinationViewController as? DoneViewController
-                    {
-                        viewController.snoreCount = count.description
-                    }
-                }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let viewController = segue.destinationViewController as? DoneViewController {
+                viewController.snoreCount = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
+                viewController.snoreCountInt = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
+        }
+    }
+    
+    func startAudio() {
+        var baseLine: Double!
+        var speakingThreshold : Double!
+        baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
+        speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
+        // Make an AudioSession, set it to PlayAndRecord and make it active
+        let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.setActive(true)
+        } catch {}
+        
+        // Set up the URL for the audio file
+        let documents: AnyObject = NSSearchPathForDirectoriesInDomains( NSSearchPathDirectory.DocumentDirectory,  NSSearchPathDomainMask.UserDomainMask, true)[0]
+        let str =  documents.stringByAppendingPathComponent("recording.m4a")
+        let url = NSURL.fileURLWithPath(str as String)
+        
+        // make a dictionary to hold the recording settings so we can instantiate our AVAudioRecorder
+        let recordSettings: [String : AnyObject] = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000.0,
+            AVNumberOfChannelsKey: 1 as NSNumber,
+            AVEncoderAudioQualityKey: AVAudioQuality.High.rawValue]
+        
+        //Instantiate an AVAudioRecorder
+        do {
+            try recorder = AVAudioRecorder(URL: url, settings: recordSettings)
+        } catch {
+        }
+        recorder.prepareToRecord()
+        recorder.meteringEnabled = true
+        
+        //start recording
+        recorder.record()
+        
+        //instantiate a timer to be called with whatever frequency we want to grab metering values
+        
+        baselineRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSound"), userInfo: nil, repeats: true)
+        baselineCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("analyzeInterval"), userInfo: nil, repeats: false)
+        
+        
+    }
+    
+    func recordSound() {
+        
+    }
+    
+    func analyzeInterval() {
+        
+    }
+    
+    
 }
 
 

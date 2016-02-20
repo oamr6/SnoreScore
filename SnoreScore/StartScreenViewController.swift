@@ -10,9 +10,32 @@ import UIKit
 
 class StartScreenViewController: UIViewController {
 
+    let gradientLayer = CAGradientLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        // 3
+        
+        let color1 = UIColor(red: 102.0/255.0, green: 102.0/255.0, blue: 204.0/255.0, alpha: 1.0).CGColor as CGColorRef
+        let color2 = UIColor(red: 47.0/255.0, green: 47.0/255.0, blue: 144.0/255.0, alpha: 1.0).CGColor as CGColorRef
+
+        gradientLayer.colors = [color1, color2]
+        
+        // 4
+        gradientLayer.locations = [0.2, 1.0]
+        
+        // 5
+        //self.view.layer.addSublayer(gradientLayer)
+        
         NSUserDefaults.standardUserDefaults().setInteger(8, forKey: "numberTimes")
+        let logo = UIImage(named: "logo.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
         // Do any additional setup after loading the view.
     }
 

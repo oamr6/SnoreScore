@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bSK-oH-jiM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bSK-oH-jiM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -30,47 +30,51 @@
                         <viewControllerLayoutGuide type="top" id="lfy-kq-QKN"/>
                         <viewControllerLayoutGuide type="bottom" id="eiw-Q4-wZu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ynh-1s-jbK">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Ynh-1s-jbK">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-8N-AZt">
-                                <rect key="frame" x="272" y="210" width="57" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-8N-AZt">
+                                <rect key="frame" x="220.5" y="300" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="SettingsButton.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="goToSettings:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="f5r-LO-vaY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-99-9TJ">
-                                <rect key="frame" x="281" y="50" width="39" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Sleep">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToSnoreRecorder:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="Lml-Hx-MyM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-aM-O2a">
-                                <rect key="frame" x="269" y="130" width="62" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Calibrate">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-aM-O2a">
+                                <rect key="frame" x="220.5" y="190" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="CalibrateButton.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="goToCalibrate:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="OOD-NV-tnw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-99-9TJ">
+                                <rect key="frame" x="220" y="80" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="SleepButton.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToSnoreRecorder:" destination="fJ4-bf-TxM" eventType="touchUpInside" id="Lml-Hx-MyM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f8q-aM-O2a" firstAttribute="centerY" secondItem="Ynh-1s-jbK" secondAttribute="centerY" constant="20" id="9ZO-4a-CnZ"/>
                             <constraint firstItem="tIl-8N-AZt" firstAttribute="top" secondItem="f8q-aM-O2a" secondAttribute="bottom" constant="50" id="Alk-s1-xJX"/>
                             <constraint firstItem="W4s-99-9TJ" firstAttribute="centerX" secondItem="Ynh-1s-jbK" secondAttribute="centerX" id="Emq-7J-65B"/>
-                            <constraint firstItem="f8q-aM-O2a" firstAttribute="leading" secondItem="Ynh-1s-jbK" secondAttribute="leadingMargin" constant="257" id="EvH-d8-vWL"/>
+                            <constraint firstItem="f8q-aM-O2a" firstAttribute="leading" secondItem="Ynh-1s-jbK" secondAttribute="leadingMargin" constant="218" id="EvH-d8-vWL"/>
                             <constraint firstItem="tIl-8N-AZt" firstAttribute="centerX" secondItem="Ynh-1s-jbK" secondAttribute="centerX" id="Ihk-Ac-qEo"/>
                             <constraint firstItem="f8q-aM-O2a" firstAttribute="top" secondItem="W4s-99-9TJ" secondAttribute="bottom" constant="50" id="KEd-lg-2Zb"/>
                             <constraint firstItem="tIl-8N-AZt" firstAttribute="centerY" secondItem="Ynh-1s-jbK" secondAttribute="centerY" constant="186" id="NjX-No-1ac"/>
@@ -78,7 +82,7 @@
                             <constraint firstItem="tIl-8N-AZt" firstAttribute="leading" secondItem="Ynh-1s-jbK" secondAttribute="leadingMargin" constant="247" id="V5B-Ec-OQa"/>
                             <constraint firstItem="W4s-99-9TJ" firstAttribute="leading" secondItem="Ynh-1s-jbK" secondAttribute="leadingMargin" constant="257" id="Xgf-GC-kjy"/>
                             <constraint firstItem="f8q-aM-O2a" firstAttribute="centerX" secondItem="Ynh-1s-jbK" secondAttribute="centerX" id="gSo-wX-cvN"/>
-                            <constraint firstItem="W4s-99-9TJ" firstAttribute="top" secondItem="lfy-kq-QKN" secondAttribute="bottom" constant="50" id="ra2-q5-D9a"/>
+                            <constraint firstItem="W4s-99-9TJ" firstAttribute="top" secondItem="lfy-kq-QKN" secondAttribute="bottom" constant="80" id="ra2-q5-D9a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W4s-99-9TJ" secondAttribute="trailing" constant="257" id="sxO-Bi-hNX"/>
                         </constraints>
                         <variation key="default">
@@ -112,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a6r-ad-ole" id="p87-Lf-IR9">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snoring Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fu-1u-1Xg">
@@ -144,7 +148,7 @@
                                 <rect key="frame" x="0.0" y="153" width="600" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w4o-LN-e6M" id="w90-dk-EVg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch Vibration Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIe-i4-edl">
@@ -176,7 +180,7 @@
                                 <rect key="frame" x="0.0" y="278" width="600" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7WX-AG-bO5" id="86k-vt-13U">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2D-wy-oVG">
@@ -212,7 +216,7 @@
                                 <rect key="frame" x="0.0" y="403" width="600" height="134"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0B-zh-SIv" id="EDr-Q5-ZdK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="133"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="133.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More to Come" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-lo-H2v">
@@ -265,9 +269,17 @@
                                     <action selector="goBackToStart:" destination="fFG-RX-Km7" eventType="touchUpInside" id="i9v-iQ-LyC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJl-an-knQ">
+                                <rect key="frame" x="279" y="332" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iJl-an-knQ" firstAttribute="centerX" secondItem="bVE-he-Qge" secondAttribute="centerX" id="OHX-P4-M0n"/>
+                            <constraint firstItem="iJl-an-knQ" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="21" id="Xj5-Wh-H1F"/>
                             <constraint firstItem="bVE-he-Qge" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="aYf-zx-juC"/>
                             <constraint firstItem="MUC-0F-RJE" firstAttribute="centerX" secondItem="bVE-he-Qge" secondAttribute="centerX" id="d30-d9-K0c"/>
                             <constraint firstItem="MUC-0F-RJE" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="50" id="hcK-xV-l7C"/>
@@ -275,6 +287,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="previousSnore" destination="iJl-an-knQ" id="1Qc-dh-klu"/>
                         <outlet property="snoreCountLabel" destination="bVE-he-Qge" id="yHO-g7-xf0"/>
                     </connections>
                 </viewController>
@@ -393,4 +406,9 @@
             <point key="canvasLocation" x="1374" y="336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CalibrateButton.png" width="160" height="60"/>
+        <image name="SettingsButton.png" width="160" height="60"/>
+        <image name="SleepButton.png" width="160" height="60"/>
+    </resources>
 </document>
