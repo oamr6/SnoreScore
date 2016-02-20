@@ -24,6 +24,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var flipState: Bool = false
     var baseLine: Double!
     var speakingThreshold : Double!
+    var decibels = 0.0
+    var trials = 0.0
     
     let thresholdPercent = 0.5
     let thresholdNumber = 0.3
@@ -56,7 +58,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             // do something
             }) { (error) -> Void in
                 //
-                print("SOMETHING HAPPENEF \(error)")
+                print("SOMETHING HAPPENED \(error)")
         }
 
         
@@ -123,7 +125,12 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func recordSound() {
+        //we have to update meters before we can get the metering values
+        recorder.updateMeters()
         
+        print(recorder.averagePowerForChannel(0))
+        decibels += Double(recorder.averagePowerForChannel(0))
+        trials++
     }
     
     func analyzeInterval() {
