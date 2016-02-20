@@ -15,7 +15,8 @@ class CalibratingViewController: UIViewController {
     @IBOutlet weak var CalButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        CalibrationStatus.hidden = true
+        CalibrationStatus.stopAnimating()
+        //CalibrationStatus.hidden = true
         
 
         // Do any additional setup after loading the view.
@@ -27,7 +28,6 @@ class CalibratingViewController: UIViewController {
     }
     @IBAction func calibrating(sender: AnyObject) {
         CalibrationLabel.text = "Prepare for Microphone Calibration"
-        CalibrationStatus.hidden = false
         CalibrationStatus.startAnimating()
         CalButton.enabled = false
     }

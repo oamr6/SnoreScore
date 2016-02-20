@@ -12,6 +12,7 @@ class SettingTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferenceChanged", name: "SnoringAlert", object: nil)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,33 +20,61 @@ class SettingTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    func preferenceChanged()
+    {
+        tableView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let preference = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
+        if preference == true
+        {
+            return 3
+        }
+        else
+        {
+            return 2
+        }
         // #warning Incomplete implementation, return the number of rows
-        return 0
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        var identifier = ""
+        if indexPath.row == 0
+        {
+            identifier = "Cell1"
+        }
+        else if indexPath.row == 1
+        {
+            identifier = "Cell2"
+        }
+        else if indexPath.row == 2
+        {
+            identifier = "Cell3"
+        }
+        else if indexPath == 3
+        {
+            identifier = "Cell4"
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+        
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +121,37 @@ class SettingTableViewController: UITableViewController {
     }
     */
 
+}
+
+class SnoringAlert: UITableViewCell
+{
+    @IBOutlet weak var SnoringAlertSwitch: UISwitch!
+    
+    override func layoutSubviews() {
+        SnoringAlertSwitch.on = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
+    }
+    
+    @IBAction func snoringAlertStateChange(sender: AnyObject)
+    {
+        NSUserDefaults.standardUserDefaults().setBool(SnoringAlertSwitch.on, forKey: "SnoringAlertPreference")
+        NSNotificationCenter.defaultCenter().postNotificationName("SnoringAlert", object: nil)
+    }
+}
+class WatchVibration: UITableViewCell
+{
+    @IBOutlet weak var watchVibrationAlertSwitch: UISwitch!
+    @IBAction func watchVibrationAlertStateChange(sender: AnyObject)
+    {
+        
+    }
+    
+}
+class AlertFrequency: UITableViewCell
+{
+    @IBOutlet weak var alertFrequencySlider: UISlider!
+    @IBAction func alertFrequencySlideState(sender: AnyObject)
+    {
+        
+    }
+    
 }

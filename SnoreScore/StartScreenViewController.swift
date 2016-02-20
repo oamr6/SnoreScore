@@ -32,6 +32,12 @@ class StartScreenViewController: UIViewController {
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    @IBAction func goToSettings(sender: AnyObject) {
+        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("Settings") as? SettingTableViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
