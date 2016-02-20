@@ -12,11 +12,11 @@ class CalibratingViewController: UIViewController {
 
     @IBOutlet weak var CalibrationStatus: UIActivityIndicatorView!
     @IBOutlet weak var CalibrationLabel: UILabel!
-    var status: String?
+    @IBOutlet weak var CalButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        CalibrationStatus.hidden = true
         
-        CalibrationLabel.text = status
 
         // Do any additional setup after loading the view.
     }
@@ -25,21 +25,11 @@ class CalibratingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func CheckStatus(){
-        /*
-        if()
-        {
-            CalibrationLabel.text = "Calibrating"
-        }
-        else{
-            CalibrationLabel.text = "Please repeat: " + " Good night don't let the bed bugs bite!"
-        }
-        if()
-        {
-            CalibrationLabel.text = "Ready"
-        }
-*/
+    @IBAction func calibrating(sender: AnyObject) {
+        CalibrationLabel.text = "Prepare for Microphone Calibration"
+        CalibrationStatus.hidden = false
+        CalibrationStatus.startAnimating()
+        CalButton.enabled = false
     }
     
     

@@ -202,7 +202,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-Yw-Eb9">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-Yw-Eb9">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calibrating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-VX-hKJ">
@@ -211,23 +211,39 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-X6-6xB">
+                                <rect key="frame" x="244" y="120" width="112" height="30"/>
+                                <state key="normal" title="Start Calibration"/>
+                                <connections>
+                                    <action selector="calibrating:" destination="awH-yg-LBW" eventType="touchUpInside" id="0sO-u7-ghj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nf4-VX-hKJ" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" constant="1" id="DGX-5u-pcv"/>
+                            <constraint firstItem="Rv1-Gh-iXU" firstAttribute="top" secondItem="ZUb-X6-6xB" secondAttribute="bottom" constant="570" id="49T-uT-m3W"/>
+                            <constraint firstItem="nf4-VX-hKJ" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="DGX-5u-pcv"/>
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="KMM-fy-jzm"/>
                             <constraint firstItem="nf4-VX-hKJ" firstAttribute="top" secondItem="Hwx-Yw-Eb9" secondAttribute="bottom" constant="45" id="MuG-GT-HH3"/>
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerY" secondItem="pCT-U5-kJT" secondAttribute="centerY" id="SsX-iS-jgb"/>
+                            <constraint firstItem="ZUb-X6-6xB" firstAttribute="top" secondItem="ETi-BL-azS" secondAttribute="bottom" constant="100" id="gy3-fo-VFz"/>
+                            <constraint firstItem="ZUb-X6-6xB" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="peR-5v-Hs7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="49T-uT-m3W"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="CalButton" destination="ZUb-X6-6xB" id="0ba-Mt-p97"/>
                         <outlet property="CalibrationLabel" destination="nf4-VX-hKJ" id="ZqO-2K-8Dn"/>
                         <outlet property="CalibrationStatus" destination="Hwx-Yw-Eb9" id="cIG-Tx-9sD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzb-wF-nIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="303"/>
+            <point key="canvasLocation" x="1572" y="383"/>
         </scene>
     </scenes>
 </document>
