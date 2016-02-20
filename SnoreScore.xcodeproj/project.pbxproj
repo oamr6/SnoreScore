@@ -24,6 +24,7 @@
 		D153E95D1C7816AD00DDBD1B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E95C1C7816AD00DDBD1B /* NotificationController.swift */; };
 		D153E95F1C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E95E1C7816AD00DDBD1B /* Assets.xcassets */; };
 		D153E9D81C78328800DDBD1B /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E9D71C78328800DDBD1B /* AudioController.swift */; };
+		D153E9DC1C7833F800DDBD1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D153E9DB1C7833F800DDBD1B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D153E95E1C7816AD00DDBD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D153E9601C7816AD00DDBD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D153E9D71C78328800DDBD1B /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		D153E9DB1C7833F800DDBD1B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D153E9DC1C7833F800DDBD1B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,7 @@
 		D153E9111C7816AD00DDBD1B = {
 			isa = PBXGroup;
 			children = (
+				D153E9DB1C7833F800DDBD1B /* AVFoundation.framework */,
 				D153E91C1C7816AD00DDBD1B /* SnoreScore */,
 				D153E9311C7816AD00DDBD1B /* SnoreScoreTests */,
 				D153E93C1C7816AD00DDBD1B /* SnoreScoreUITests */,
