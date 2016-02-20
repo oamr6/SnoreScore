@@ -20,10 +20,17 @@ class StartScreenViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        
+    @IBAction func goToCalibrate(sender: AnyObject)
+    {
+        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("Calibration") as? CalibratingViewController{
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    @IBAction func goToSnoreRecorder(sender: AnyObject)
+    {
+        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("SnoreRecorder") as? SnoreRecorderViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     /*
     // MARK: - Navigation
@@ -34,5 +41,4 @@ class StartScreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
