@@ -101,6 +101,7 @@ class CalibratingViewController: UIViewController {
         dec = 0
         trials = 0
         print("Quiet average is " + String(baselineThreshold))
+        NSUserDefaults.standardUserDefaults().setDouble(baselineThreshold, forKey: "baseLineRecord")
         speakingRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSpeaking"), userInfo: nil, repeats: true)
         speakingCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("calculateSpeaking"), userInfo: nil, repeats: false)
 
@@ -122,6 +123,8 @@ class CalibratingViewController: UIViewController {
         speakingRecordingTimer.invalidate()
         speakingThreshold = dec / trials
         print("Speaking average is " + String(dec / trials))
+        NSUserDefaults.standardUserDefaults().setDouble(speakingThreshold, forKey: "speakingThresholdRecord")
+
     }
     
     
