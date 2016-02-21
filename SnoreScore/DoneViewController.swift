@@ -19,9 +19,10 @@ class DoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Your Snore Score"
+        
         snoreCountLabel.text = snoreCount
-        navigationController?.navigationBarHidden = true
-        navigationController?.navigationItem.backBarButtonItem?.enabled = false
+        self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +33,7 @@ class DoneViewController: UIViewController {
     
     @IBAction func goBackToStart(sender: AnyObject) {
         navigationController?.navigationBarHidden = false
-        navigationController?.popToRootViewControllerAnimated(false)
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     /*

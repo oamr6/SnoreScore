@@ -12,6 +12,9 @@ class SettingTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Settings"
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferenceChanged", name: "SnoringAlert", object: nil)
 
         // Uncomment the following line to preserve selection between presentations

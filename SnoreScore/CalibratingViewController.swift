@@ -27,6 +27,9 @@ class CalibratingViewController: UIViewController {
     @IBOutlet weak var CalButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Calibrate"
+        
         CalibrationStatus.stopAnimating()
         //CalibrationStatus.hidden = true
         //monitor = AudioMonitor()
@@ -39,7 +42,7 @@ class CalibratingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func calibrating(sender: AnyObject) {
-        navigationController?.navigationBarHidden = true;
+        self.navigationItem.setHidesBackButton(true, animated:true);
         CalibrationLabel.text = "Prepare for Microphone Calibration"
         calibrateAudio()
         //monitor = AudioMonitor()
@@ -122,11 +125,11 @@ class CalibratingViewController: UIViewController {
     
     func calculateSpeaking() {
         speakingRecordingTimer.invalidate()
-        //speakingThreshold = decibels / trials
-        speakingThreshold = -30.00
+        speakingThreshold = decibels / trials
+        
         print("Speaking average is " + String(decibels / trials))
         NSUserDefaults.standardUserDefaults().setDouble(speakingThreshold, forKey: "speakingThresholdRecord")
-        navigationController?.navigationBarHidden = false
+        self.navigationItem.setHidesBackButton(false, animated:true);
         CalibrationStatus.stopAnimating()
 
     }

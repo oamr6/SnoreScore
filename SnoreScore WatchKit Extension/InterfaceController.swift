@@ -50,11 +50,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate  {
         print("lollololololololo")
         if ((message.keys.indexOf("vibrate")) != nil) {
             self.LastHapticFeedback()
-            //var timer = NSTimer()
-            //timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "HapticFeedback", userInfo: nil, repeats: true)
-           // timer.fire()
-            
-            //WKInterfaceDevice.currentDevice().playHaptic(.Start)
         }
     }
 
