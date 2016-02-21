@@ -162,7 +162,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         if (loud / trials >= thresholdPercent) {
             count++
             NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
-            
+           
             session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
                 // do something
                 }) { (error) -> Void in
@@ -208,7 +208,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
             
             audioPlayer.play()
-            audioPlayer.volume = 1.0
+            audioPlayer.volume = 2.0
             
             
             
