@@ -22,7 +22,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var delayTimer = NSTimer()
     
     let longDelay = 30.0 * 60.0
-    let shortDelay = 120.0
+    let shortDelay = 20.0
     
     var consecutiveSnores = 0
     
@@ -163,25 +163,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             count++
             NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
             
-            let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
-            
-            if audioFilePath != nil {
-                
-                let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
-                
-                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
-                audioPlayer.play()
-                audioPlayer.volume = 0.1
-                
-                
-                
-            } else {
-                print("audio file is not found")
-            }
-            
-
-            print("SNORE!")
-                        session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
+            session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
                 // do something
                 }) { (error) -> Void in
                     //
