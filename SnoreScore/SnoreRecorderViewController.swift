@@ -92,10 +92,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
 //        var frequency : Float!
 //        var vibration: Bool!
 //        var alert: Bool!
-        baseLine = -45.00
-            //NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
-        speakingThreshold = -30.00
-            //NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
+        baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
+        speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
         //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
         //vibration = NSUserDefaults.standardUserDefaults().boolForKey("VibrationAlert")
       //  alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
@@ -144,7 +142,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         recorder.updateMeters()
         //print(recorder.averagePowerForChannel(0))
         
-        if (Double(recorder.averagePowerForChannel(0)) > thresholdNumber * (speakingThreshold - baseLine) + baseLine)
+        if (Double(recorder.averagePowerForChannel(0)) > thresholdNumber * (speakingThreshold! - baseLine!) + baseLine!)
         {
             print("Loud!")
             loud++
