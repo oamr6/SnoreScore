@@ -43,8 +43,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Sleep"
+                self.title = "Sleep"
         
         //print(NSUserDefaults.standardUserDefaults().integerForKey("numberTimes"))
         // Do any additional setup after loading the view, typically from a nib.
@@ -156,6 +155,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func analyzeInterval() {
+        
+        
         if (loud / trials >= thresholdPercent) {
             count++
             
@@ -183,6 +184,17 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
                     //
                     //                print("SOMETHING HAPPENED \(error)")
             }
+            playCalmingMusic()
+            
+            if (consecutiveSnores != 0) {
+                audioPlayer.volume = audioPlayer.volume*1.3
+            }
+            
+            
+
+            print("SNORE!")
+            
+            
             recordingTimer.invalidate()
             periodTimer.invalidate()
             consecutiveSnores++
@@ -201,8 +213,26 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     
+        func playCalmingMusic(){
+            let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
+            
+            if audioFilePath != nil {
+                
+                let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+                
+                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
+                
+                audioPlayer.play()
+                audioPlayer.volume = 1.0
+                
+                
+                
+            } else {
+                print("audio file is not found")
+            }
+    }
+    
 }
-
 
     /*
     // MARK: - Navigation
