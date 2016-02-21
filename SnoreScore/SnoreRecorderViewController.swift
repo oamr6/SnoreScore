@@ -151,7 +151,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         recorder.updateMeters()
         //print(recorder.averagePowerForChannel(0))
         
-        if (Double(recorder.averagePowerForChannel(0)) > thresholdNumber * (speakingThreshold! - baseLine!) + baseLine!)
+        if (Double(recorder.averagePowerForChannel(0)) > thresholdPercent * (speakingThreshold! - baseLine!) + baseLine!)
         {
             print("Loud!")
             loud++
@@ -162,7 +162,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     func analyzeInterval() {
         
         
-        if (loud / trials >= thresholdPercent) {
+        if (loud / trials >= thresholdNumber) {
             count++
             NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
             //if(vibration?.boolValue == true){
