@@ -84,6 +84,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         
         recordingTimer.invalidate()
         periodTimer.invalidate()
+        delayTimer.invalidate()
         if(flipState == true)
         {
             flipState = false
@@ -164,6 +165,9 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     func analyzeInterval() {
         if (loud / trials >= thresholdPercent) {
             // ========= PLAY SOUND ==========
+            if (consecutiveSnores != 0) {
+                // Increase volume
+            }
             print("SNORE!")
             recordingTimer.invalidate()
             periodTimer.invalidate()
