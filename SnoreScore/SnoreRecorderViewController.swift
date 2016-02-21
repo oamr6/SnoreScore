@@ -31,8 +31,26 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     let thresholdPercent = 0.5
     let thresholdNumber = 0.3
     
+    let gradientLayer = CAGradientLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        // 3
+        
+        let color1 = UIColor(red: 102.0/255.0, green: 102.0/255.0, blue: 204.0/255.0, alpha: 1.0).CGColor as CGColorRef
+        let color2 = UIColor(red: 47.0/255.0, green: 47.0/255.0, blue: 144.0/255.0, alpha: 1.0).CGColor as CGColorRef
+        
+        gradientLayer.colors = [color1, color2]
+        
+        // 4
+        gradientLayer.locations = [0.2, 1.0]
+        
+        // 5
+        //self.view.layer.addSublayer(gradientLayer)
+        
         //print(NSUserDefaults.standardUserDefaults().integerForKey("numberTimes"))
         // Do any additional setup after loading the view, typically from a nib.
         if WCSession.isSupported() {
@@ -46,6 +64,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         buttonState.enabled = true
         buttonState.setTitle("Stop Recording", forState: .Normal)
         state.text = "Currently Recording"
+        
+        self.navigationItem.setHidesBackButton(true, animated:true);
         
         startAudio()
         
