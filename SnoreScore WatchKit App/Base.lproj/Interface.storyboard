@@ -10,12 +10,15 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SnoreScore_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="jYt-AU-oco">
+                        <button width="1" alignment="left" title="Test" id="jYt-AU-oco">
                             <connections>
                                 <action selector="LastHapticFeedback" destination="AgC-eL-Hgc" id="lHL-NW-alv"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="testButton" destination="jYt-AU-oco" id="NmX-vp-Ivs"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

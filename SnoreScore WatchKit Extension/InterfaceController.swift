@@ -12,12 +12,15 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate  {
 
+    var timer: NSTimer!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
     }
 
+    @IBOutlet var testButton: WKInterfaceButton!
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -30,25 +33,25 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate  {
     }
 
     @IBAction func LastHapticFeedback() {
-        var timer = NSTimer()
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "HapticFeedback", userInfo: nil, repeats: true)
-        timer.fire()
-        
-        WKInterfaceDevice.currentDevice().playHaptic(.Start)
+        print("LHF")
+        timer = NSTimer(timeInterval: 10, target: self, selector: "actuallyPlayHapticYoLol", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }
+    
+    func actuallyPlayHapticYoLol() {
+        print("PLAYING HAPTIC")
+        WKInterfaceDevice.currentDevice().playHaptic(.Failure)
+    }
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
-    }
-
-   
-    @IBAction func HapticFeedback() {
-        WKInterfaceDevice.currentDevice().playHaptic(.Click)
     }
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         print("lollololololololo")
         if ((message.keys.indexOf("vibrate")) != nil) {
+            testButton.setTitle("This works")
             self.LastHapticFeedback()
         }
     }
