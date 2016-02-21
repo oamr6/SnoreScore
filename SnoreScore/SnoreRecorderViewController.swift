@@ -36,7 +36,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var frequency : Float?
     var vibration: Bool?
     var alert: Bool?
-    var maxVol: Float?
+    var maxVol: Float!
 
     
     let thresholdPercent = 0.5
@@ -165,17 +165,21 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         if (loud / trials >= thresholdPercent) {
             count++
             NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
-           
-            session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
-                // do something
-                }) { (error) -> Void in
-                    //
-                    //                print("SOMETHING HAPPENED \(error)")
+            //if(vibration?.boolValue == true){
+                session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
+                    // do something
+                    }) { (error) -> Void in
+                        //
+                        //                print("SOMETHING HAPPENED \(error)")
+                   // }
             }
             playCalmingMusic()
             
             if (consecutiveSnores != 0) {
                 audioPlayer.volume = audioPlayer.volume*1.3
+                if (audioPlayer.volume > (maxVol/4)){
+                    audioPlayer.volume = maxVol/4
+                }
             }
             
             

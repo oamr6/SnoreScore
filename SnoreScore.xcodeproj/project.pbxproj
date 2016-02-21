@@ -15,7 +15,7 @@
 		676FB6C41C79A1B50008D7DD /* PrepareCalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6C31C79A1B50008D7DD /* PrepareCalibrationViewController.swift */; };
 		677AABE51C799E2B00017A3D /* relaxer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 677AABE41C799E2B00017A3D /* relaxer.wav */; };
 		677AABE91C79AB7A00017A3D /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 677AABE81C79AB7A00017A3D /* ding.mp3 */; };
-		677AABEB1C79B47D00017A3D /* beats.wav in Resources */ = {isa = PBXBuildFile; fileRef = 677AABEA1C79B47C00017A3D /* beats.wav */; };
+		677AABEF1C79B6E800017A3D /* beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 677AABEE1C79B6E800017A3D /* beat.wav */; };
 		D145A3611C790F7E00056A34 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3601C790F7E00056A34 /* logo.png */; };
 		D145A36B1C79797D00056A34 /* BeginCalibrationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A36A1C79797D00056A34 /* BeginCalibrationButton.png */; };
 		D145A36D1C79815D00056A34 /* WakeUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A36C1C79815D00056A34 /* WakeUpButton.png */; };
@@ -107,7 +107,7 @@
 		676FB6C31C79A1B50008D7DD /* PrepareCalibrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareCalibrationViewController.swift; sourceTree = "<group>"; };
 		677AABE41C799E2B00017A3D /* relaxer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = relaxer.wav; path = "Supporting Files/relaxer.wav"; sourceTree = "<group>"; };
 		677AABE81C79AB7A00017A3D /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
-		677AABEA1C79B47C00017A3D /* beats.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beats.wav; path = "SnoreScore/Supporting Files/beats.wav"; sourceTree = "<group>"; };
+		677AABEE1C79B6E800017A3D /* beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beat.wav; path = "SnoreScore/Supporting Files/beat.wav"; sourceTree = "<group>"; };
 		D145A3601C790F7E00056A34 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D145A36A1C79797D00056A34 /* BeginCalibrationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BeginCalibrationButton.png; sourceTree = "<group>"; };
 		D145A36C1C79815D00056A34 /* WakeUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WakeUpButton.png; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		D153E9111C7816AD00DDBD1B = {
 			isa = PBXGroup;
 			children = (
-				677AABEA1C79B47C00017A3D /* beats.wav */,
+				677AABEE1C79B6E800017A3D /* beat.wav */,
 				677AABE81C79AB7A00017A3D /* ding.mp3 */,
 				D145A3741C79A3E200056A34 /* CalibrateButton.png */,
 				D145A3751C79A3E200056A34 /* ContinueButton.png */,
@@ -433,7 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677AABEB1C79B47D00017A3D /* beats.wav in Resources */,
+				677AABEF1C79B6E800017A3D /* beat.wav in Resources */,
 				D145A36F1C79850C00056A34 /* ExitToMenuButton.png in Resources */,
 				D153E9281C7816AD00DDBD1B /* LaunchScreen.storyboard in Resources */,
 				677AABE91C79AB7A00017A3D /* ding.mp3 in Resources */,
