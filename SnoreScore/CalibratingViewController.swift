@@ -27,6 +27,9 @@ class CalibratingViewController: UIViewController {
     @IBOutlet weak var CalButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Calibrate"
+        
         CalibrationStatus.stopAnimating()
         //CalibrationStatus.hidden = true
         //monitor = AudioMonitor()

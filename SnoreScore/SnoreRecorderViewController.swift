@@ -44,7 +44,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //viewController.title = "some title"
+        self.title = "Sleep"
         
         //print(NSUserDefaults.standardUserDefaults().integerForKey("numberTimes"))
         // Do any additional setup after loading the view, typically from a nib.
@@ -165,6 +165,13 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
                 // Increase volume
             }
             print("SNORE!")
+            
+            session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
+                // do something
+                }) { (error) -> Void in
+                    //
+                    //                print("SOMETHING HAPPENED \(error)")
+            }
             recordingTimer.invalidate()
             periodTimer.invalidate()
             consecutiveSnores++
@@ -172,6 +179,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         } else if (consecutiveSnores > 0) {
             consecutiveSnores = 0
         }
+
         loud = 0
         trials = 0
     }
