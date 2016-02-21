@@ -9,9 +9,10 @@
 import UIKit
 import WatchConnectivity
 import AVFoundation
+import AVFoundation
 
 class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
-
+    var audioPlayer:AVAudioPlayer!
     var session: WCSession?
     @IBOutlet weak var state: UILabel!
     @IBOutlet weak var buttonState: UIButton!
@@ -111,11 +112,11 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
         speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
         //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
-        //vibration = NSUserDefaults.standardUserDefaults().boolForKey("VibrationAlert")
+        vibration = NSUserDefaults.standardUserDefaults().boolForKey("WatchAlertPreference")
         alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
         print(alert)
         //print(frequency)
-        //print(vibration)
+        print(vibration)
         // Make an AudioSession, set it to PlayAndRecord and make it active
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         do {
@@ -168,9 +169,25 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     func analyzeInterval() {
         if (loud / trials >= thresholdPercent) {
-            print("SNORE!")
+            let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
             
-            session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
+            if audioFilePath != nil {
+                
+                let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+                
+                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
+                audioPlayer.play()
+                audioPlayer.volume = 0.1
+                
+                
+                
+            } else {
+                print("audio file is not found")
+            }
+            
+
+            print("SNORE!")
+                        session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
                 // do something
                 }) { (error) -> Void in
                     //
