@@ -289,27 +289,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVE-he-Qge">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVE-he-Qge">
+                                <rect key="frame" x="206" y="253" width="188.5" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUC-0F-RJE">
-                                <rect key="frame" x="180" y="361" width="240" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUC-0F-RJE">
+                                <rect key="frame" x="180" y="398" width="240" height="60"/>
                                 <state key="normal" image="ExitToMenuButton.png"/>
                                 <connections>
                                     <action selector="goBackToStart:" destination="fFG-RX-Km7" eventType="touchUpInside" id="i9v-iQ-LyC"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clearlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xz1-dI-e5n">
+                                <rect key="frame" x="221" y="142" width="158" height="61"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Xz1-dI-e5n" firstAttribute="top" secondItem="Xau-sU-oRk" secondAttribute="bottom" constant="50" id="6jz-Ss-WMN"/>
+                            <constraint firstItem="bVE-he-Qge" firstAttribute="top" secondItem="Xz1-dI-e5n" secondAttribute="bottom" constant="50" id="Bdk-Se-4Gr"/>
+                            <constraint firstItem="Xz1-dI-e5n" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="PFk-01-BIE"/>
+                            <constraint firstItem="bVE-he-Qge" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="Ugi-YW-MPG"/>
                             <constraint firstItem="bVE-he-Qge" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="aYf-zx-juC"/>
                             <constraint firstItem="MUC-0F-RJE" firstAttribute="centerX" secondItem="bVE-he-Qge" secondAttribute="centerX" id="d30-d9-K0c"/>
                             <constraint firstItem="MUC-0F-RJE" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="50" id="hcK-xV-l7C"/>
                             <constraint firstItem="bVE-he-Qge" firstAttribute="centerY" secondItem="9ta-qw-8tp" secondAttribute="centerY" id="o1L-Zp-d8T"/>
+                            <constraint firstItem="MUC-0F-RJE" firstAttribute="top" secondItem="bVE-he-Qge" secondAttribute="bottom" constant="49.5" id="txZ-3K-j3f"/>
+                            <constraint firstItem="Xz1-dI-e5n" firstAttribute="centerX" secondItem="9ta-qw-8tp" secondAttribute="centerX" id="xbd-ba-ERH"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6jz-Ss-WMN"/>
+                                <exclude reference="PFk-01-BIE"/>
+                                <exclude reference="aYf-zx-juC"/>
+                                <exclude reference="hcK-xV-l7C"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="snoreCountLabel" destination="bVE-he-Qge" id="yHO-g7-xf0"/>
@@ -424,5 +441,6 @@
         <image name="SettingsButton.png" width="160" height="60"/>
         <image name="SleepButton.png" width="160" height="60"/>
         <image name="WakeUpButton.png" width="240" height="60"/>
+        <image name="clearlogo.png" width="158" height="61"/>
     </resources>
 </document>
