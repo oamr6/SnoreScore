@@ -122,7 +122,8 @@ class CalibratingViewController: UIViewController {
     
     func calculateSpeaking() {
         speakingRecordingTimer.invalidate()
-        speakingThreshold = decibels / trials
+        //speakingThreshold = decibels / trials
+        speakingThreshold = -30.00
         print("Speaking average is " + String(decibels / trials))
         NSUserDefaults.standardUserDefaults().setDouble(speakingThreshold, forKey: "speakingThresholdRecord")
         navigationController?.navigationBarHidden = false

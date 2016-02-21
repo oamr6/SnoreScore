@@ -22,8 +22,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     var count = 0
     var flipState: Bool = false
-    var baseLine: Double!
-    var speakingThreshold : Double!
+    var baseLine: Double?
+    var speakingThreshold : Double?
     var decibels = 0.0
     var loud = 0.0
     var trials = 0.0
@@ -55,11 +55,11 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
 
   
     @IBAction func Vibrate(sender: AnyObject) {
-        session!.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
+        session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
             // do something
             }) { (error) -> Void in
                 //
-                print("SOMETHING HAPPENED \(error)")
+//                print("SOMETHING HAPPENED \(error)")
         }
 
         
@@ -89,17 +89,17 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func startAudio() {
-        var baseLine: Double!
-        var speakingThreshold : Double!
-        var frequency : Float!
-        var vibration: Bool!
-        var alert: Bool!
-        baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
-        speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
+//        var frequency : Float!
+//        var vibration: Bool!
+//        var alert: Bool!
+        baseLine = -45.00
+            //NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
+        speakingThreshold = -30.00
+            //NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
         //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
         //vibration = NSUserDefaults.standardUserDefaults().boolForKey("VibrationAlert")
-        alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
-        print(alert)
+      //  alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
+       // print(alert)
         //print(frequency)
         //print(vibration)
         // Make an AudioSession, set it to PlayAndRecord and make it active
