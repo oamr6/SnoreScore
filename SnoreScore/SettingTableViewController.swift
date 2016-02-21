@@ -43,7 +43,7 @@ class SettingTableViewController: UITableViewController {
         let preference = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
         if preference == true
         {
-            return 3
+            return 4
         }
         else
         {
@@ -66,7 +66,7 @@ class SettingTableViewController: UITableViewController {
         {
             identifier = "Cell3"
         }
-        else if indexPath == 3
+        else if indexPath.row == 3
         {
             identifier = "Cell4"
         }
@@ -155,9 +155,27 @@ class WatchVibration: UITableViewCell
 class AlertFrequency: UITableViewCell
 {
     @IBOutlet weak var alertFrequencySlider: UISlider!
+    
+    override func layoutSubviews() {
+        alertFrequencySlider.value = NSUserDefaults.standardUserDefaults().floatForKey("AlertFrequencyPreference")
+    }
     @IBAction func alertFrequencySlideState(sender: AnyObject)
     {
-        //NSUserDefaults.standardUserDefaults().setFloat(alertFrequencySlider.value, forKey: "FrequencyAlert")
+        NSUserDefaults.standardUserDefaults().setFloat(alertFrequencySlider.value, forKey: "AlertFrequencyPreference")
     }
     
 }
+class MaxVolume: UITableViewCell
+{
+   
+    @IBOutlet weak var maxVolumeSlider: UISlider!
+    override func layoutSubviews()
+    {
+        maxVolumeSlider.value = NSUserDefaults.standardUserDefaults().floatForKey("MaxVolumePreference")
+    }
+    @IBAction func maxVolumeSliderState(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().setFloat(maxVolumeSlider.value, forKey: "MaxVolumePreference")
+    }
+    
+}
+
