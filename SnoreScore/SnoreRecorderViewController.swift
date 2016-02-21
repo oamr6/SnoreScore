@@ -36,6 +36,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var frequency : Float?
     var vibration: Bool?
     var alert: Bool?
+    var maxVol: Float?
 
     
     let thresholdPercent = 0.5
@@ -100,12 +101,14 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     func startAudio() {
         baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
         speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
-        //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
+        frequency = NSUserDefaults.standardUserDefaults().floatForKey("AlertFrequencyPreference")
         vibration = NSUserDefaults.standardUserDefaults().boolForKey("WatchAlertPreference")
         alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
-        //print(alert)
-        //print(frequency)
-        //print(vibration)
+        maxVol = NSUserDefaults.standardUserDefaults().floatForKey("MaxVolumePreference")
+        print(alert)
+        print(frequency)
+        print(vibration)
+        print(maxVol)
         // Make an AudioSession, set it to PlayAndRecord and make it active
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         do {
@@ -199,7 +202,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     
     func playCalmingMusic(){
-        let audioFilePath = NSBundle.mainBundle().pathForResource("relaxer", ofType: "wav")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("beats", ofType: "wav")
         
         if audioFilePath != nil {
             
