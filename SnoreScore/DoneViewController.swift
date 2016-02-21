@@ -19,6 +19,8 @@ class DoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Your Snore Score"
+        
         snoreCountLabel.text = snoreCount
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
