@@ -19,6 +19,12 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var recorder: AVAudioRecorder!
     var recordingTimer = NSTimer()
     var periodTimer = NSTimer()
+    var delayTimer = NSTimer()
+    
+    let longDelay = 30.0 * 60.0
+    let shortDelay = 120.0
+    
+    var consecutiveSnores = 0
     
     var count = 0
     var flipState: Bool = false
@@ -31,25 +37,10 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     let thresholdPercent = 0.5
     let thresholdNumber = 0.3
     
-    let gradientLayer = CAGradientLayer()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gradientLayer.frame = self.view.bounds
-        
-        // 3
-        
-        let color1 = UIColor(red: 102.0/255.0, green: 102.0/255.0, blue: 204.0/255.0, alpha: 1.0).CGColor as CGColorRef
-        let color2 = UIColor(red: 47.0/255.0, green: 47.0/255.0, blue: 144.0/255.0, alpha: 1.0).CGColor as CGColorRef
-        
-        gradientLayer.colors = [color1, color2]
-        
-        // 4
-        gradientLayer.locations = [0.2, 1.0]
-        
-        // 5
-        //self.view.layer.addSublayer(gradientLayer)
+        //viewController.title = "some title"
         
         //print(NSUserDefaults.standardUserDefaults().integerForKey("numberTimes"))
         // Do any additional setup after loading the view, typically from a nib.
@@ -172,10 +163,22 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     func analyzeInterval() {
         if (loud / trials >= thresholdPercent) {
+            // ========= PLAY SOUND ==========
             print("SNORE!")
+            recordingTimer.invalidate()
+            periodTimer.invalidate()
+            consecutiveSnores++
+            delayTimer = NSTimer.scheduledTimerWithTimeInterval(consecutiveSnores > 8 ? longDelay : shortDelay, target: self, selector: Selector("delayBetweenNoises"), userInfo: nil, repeats: false)
+        } else if (consecutiveSnores > 0) {
+            consecutiveSnores = 0
         }
         loud = 0
         trials = 0
+    }
+    
+    func delayBetweenNoises() {
+        recordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSound"), userInfo: nil, repeats: true)
+        periodTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("analyzeInterval"), userInfo: nil, repeats: true)
     }
     
     
