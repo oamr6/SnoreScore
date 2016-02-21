@@ -14,7 +14,6 @@ import AVFoundation
 class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var audioPlayer:AVAudioPlayer!
     var session: WCSession?
-    @IBOutlet weak var state: UILabel!
     @IBOutlet weak var buttonState: UIButton!
     
     var recorder: AVAudioRecorder!
@@ -23,7 +22,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var delayTimer = NSTimer()
     
     let longDelay = 30.0 * 60.0
-    let shortDelay = 120.0
+    let shortDelay = 20.0
     
     var consecutiveSnores = 0
     
@@ -44,8 +43,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Sleep"
+                self.title = "Sleep"
         
         //print(NSUserDefaults.standardUserDefaults().integerForKey("numberTimes"))
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,8 +56,6 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             session.activateSession()
         }
         buttonState.enabled = true
-        buttonState.setTitle("Stop Recording", forState: .Normal)
-        state.text = "Currently Recording"
         
         self.navigationItem.setHidesBackButton(true, animated:true);
         
@@ -89,16 +85,17 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         {
             flipState = false
             buttonState.setTitle("Done Recording", forState: .Normal)
-            state.text = "Displaying Recording Recording"
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let viewController = segue.destinationViewController as? DoneViewController {
-                viewController.snoreCount = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
-                viewController.snoreCountInt = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
-        }
-    }
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //if let viewController = segue.destinationViewController as? DoneViewController {
+             //   viewController.snoreCount = 
+            
+            //    NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
+                //viewController.snoreCountInt = //NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
+      //  }
+   // }
     
     func startAudio() {
         baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
@@ -106,9 +103,9 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
         vibration = NSUserDefaults.standardUserDefaults().boolForKey("WatchAlertPreference")
         alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
-        print(alert)
+        //print(alert)
         //print(frequency)
-        print(vibration)
+        //print(vibration)
         // Make an AudioSession, set it to PlayAndRecord and make it active
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         do {
@@ -160,31 +157,29 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func analyzeInterval() {
+        
+        
         if (loud / trials >= thresholdPercent) {
-            let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
-            
-            if audioFilePath != nil {
-                
-                let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
-                
-                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
-                audioPlayer.play()
-                audioPlayer.volume = 0.1
-                
-                
-                
-            } else {
-                print("audio file is not found")
-            }
-            
-
-            print("SNORE!")
-                        session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
+            count++
+            NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
+           
+            session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
                 // do something
                 }) { (error) -> Void in
                     //
                     //                print("SOMETHING HAPPENED \(error)")
             }
+            playCalmingMusic()
+            
+            if (consecutiveSnores != 0) {
+                audioPlayer.volume = audioPlayer.volume*1.3
+            }
+            
+            
+
+            print("SNORE!")
+            
+            
             recordingTimer.invalidate()
             periodTimer.invalidate()
             consecutiveSnores++
@@ -203,8 +198,26 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     
+    func playCalmingMusic(){
+        let audioFilePath = NSBundle.mainBundle().pathForResource("relaxer", ofType: "mp3")
+        
+        if audioFilePath != nil {
+            
+            let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            
+            audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
+            
+            audioPlayer.play()
+            audioPlayer.volume = 1.0
+            
+            
+            
+        } else {
+            print("audio file is not found")
+        }
+    }
+    
 }
-
 
     /*
     // MARK: - Navigation
