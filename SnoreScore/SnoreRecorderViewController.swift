@@ -22,7 +22,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var delayTimer = NSTimer()
     
     let longDelay = 30.0 * 60.0
-    let shortDelay = 120.0
+    let shortDelay = 20.0
     
     var consecutiveSnores = 0
     
