@@ -102,9 +102,9 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
         vibration = NSUserDefaults.standardUserDefaults().boolForKey("WatchAlertPreference")
         alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
-        print(alert)
+        //print(alert)
         //print(frequency)
-        print(vibration)
+        //print(vibration)
         // Make an AudioSession, set it to PlayAndRecord and make it active
         let audioSession:AVAudioSession = AVAudioSession.sharedInstance()
         do {
@@ -157,6 +157,8 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     func analyzeInterval() {
         if (loud / trials >= thresholdPercent) {
+            count++
+            
             let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
             
             if audioFilePath != nil {
