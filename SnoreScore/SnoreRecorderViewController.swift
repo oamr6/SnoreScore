@@ -14,7 +14,6 @@ import AVFoundation
 class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var audioPlayer:AVAudioPlayer!
     var session: WCSession?
-    @IBOutlet weak var state: UILabel!
     @IBOutlet weak var buttonState: UIButton!
     
     var recorder: AVAudioRecorder!
@@ -57,8 +56,6 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             session.activateSession()
         }
         buttonState.enabled = true
-        buttonState.setTitle("Stop Recording", forState: .Normal)
-        state.text = "Currently Recording"
         
         self.navigationItem.setHidesBackButton(true, animated:true);
         
@@ -88,7 +85,6 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         {
             flipState = false
             buttonState.setTitle("Done Recording", forState: .Normal)
-            state.text = "Displaying Recording Recording"
         }
     }
     

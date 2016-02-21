@@ -43,7 +43,7 @@ class CalibratingViewController: UIViewController {
     }
     @IBAction func calibrating(sender: AnyObject) {
         self.navigationItem.setHidesBackButton(true, animated:true);
-        CalibrationLabel.text = "Prepare for Microphone Calibration"
+        CalibrationLabel.text = "Calibration in Progress..."
         calibrateAudio()
         //monitor = AudioMonitor()
         CalibrationStatus.startAnimating()
@@ -107,7 +107,7 @@ class CalibratingViewController: UIViewController {
         print("Quiet average is " + String(baselineThreshold))
         NSUserDefaults.standardUserDefaults().setDouble(baselineThreshold, forKey: "baseLineRecord")
         speakingRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSpeaking"), userInfo: nil, repeats: true)
-        speakingCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("calculateSpeaking"), userInfo: nil, repeats: false)
+        speakingCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: Selector("calculateSpeaking"), userInfo: nil, repeats: false)
 
         
     }
@@ -131,6 +131,9 @@ class CalibratingViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setDouble(speakingThreshold, forKey: "speakingThresholdRecord")
         self.navigationItem.setHidesBackButton(false, animated:true);
         CalibrationStatus.stopAnimating()
+        CalButton.enabled = true
+        CalibrationLabel.text = "Calibration Complete"
+        
 
     }
     
