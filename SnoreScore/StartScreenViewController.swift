@@ -45,7 +45,7 @@ class StartScreenViewController: UIViewController {
     }
     @IBAction func goToCalibrate(sender: AnyObject)
     {
-        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("Calibration") as? CalibratingViewController{
+        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("PrepareCal") as? PrepareCalibrationViewController{
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
