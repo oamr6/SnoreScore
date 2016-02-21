@@ -33,6 +33,10 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     var decibels = 0.0
     var loud = 0.0
     var trials = 0.0
+    var frequency : Float?
+    var vibration: Bool?
+    var alert: Bool?
+
     
     let thresholdPercent = 0.5
     let thresholdNumber = 0.3
@@ -66,12 +70,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
 
   
     @IBAction func Vibrate(sender: AnyObject) {
-        session?.sendMessage(["vibrate": true], replyHandler: { (reply) -> Void in
-            // do something
-            }) { (error) -> Void in
-                //
-//                print("SOMETHING HAPPENED \(error)")
-        }
+        
 
         
     }
@@ -101,15 +100,12 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     func startAudio() {
-//        var frequency : Float!
-//        var vibration: Bool!
-//        var alert: Bool!
         baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
         speakingThreshold = NSUserDefaults.standardUserDefaults().doubleForKey("speakingThresholdRecord")
         //frequency = NSUserDefaults.standardUserDefaults().floatForKey("FrequencySlider")
         //vibration = NSUserDefaults.standardUserDefaults().boolForKey("VibrationAlert")
-      //  alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
-       // print(alert)
+        alert = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
+        print(alert)
         //print(frequency)
         //print(vibration)
         // Make an AudioSession, set it to PlayAndRecord and make it active
