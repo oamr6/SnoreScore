@@ -35,12 +35,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate  {
     @IBAction func LastHapticFeedback() {
         print("LHF")
         timer = NSTimer(timeInterval: 10, target: self, selector: "actuallyPlayHapticYoLol", userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+      //  NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+        timer.fire()
     }
     
     func actuallyPlayHapticYoLol() {
+   
         print("PLAYING HAPTIC")
+        
         WKInterfaceDevice.currentDevice().playHaptic(.Failure)
+        
     }
     
     override func didDeactivate() {
@@ -53,6 +57,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate  {
         if ((message.keys.indexOf("vibrate")) != nil) {
             testButton.setTitle("This works")
             self.LastHapticFeedback()
+            
         }
     }
 
