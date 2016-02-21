@@ -163,7 +163,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
             count++
             NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
             
-            let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
+            let audioFilePath = NSBundle.mainBundle().pathForResource("relaxer", ofType: "mp3")
             
             if audioFilePath != nil {
                 
@@ -217,7 +217,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     
         func playCalmingMusic(){
-            let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
+            let audioFilePath = NSBundle.mainBundle().pathForResource("relaxer", ofType: "mp3")
             
             if audioFilePath != nil {
                 
