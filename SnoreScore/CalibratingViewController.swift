@@ -12,6 +12,7 @@ import AVFoundation
 class CalibratingViewController: UIViewController {
     
     //var monitor: AudioMonitor!
+    var audioPlayer: AVAudioPlayer!
     var recorder: AVAudioRecorder!
     var baselineRecordingTimer = NSTimer()
     var baselineCalculationTimer = NSTimer()
@@ -77,7 +78,7 @@ class CalibratingViewController: UIViewController {
         }
         recorder.prepareToRecord()
         recorder.meteringEnabled = true
-        
+        dingSound()
         //start recording
         recorder.record()
         
@@ -106,6 +107,7 @@ class CalibratingViewController: UIViewController {
         trials = 0
         print("Quiet average is " + String(baselineThreshold))
         NSUserDefaults.standardUserDefaults().setDouble(baselineThreshold, forKey: "baseLineRecord")
+        dingSound()
         speakingRecordingTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("recordSpeaking"), userInfo: nil, repeats: true)
         speakingCalculationTimer = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: Selector("calculateSpeaking"), userInfo: nil, repeats: false)
 
@@ -133,11 +135,31 @@ class CalibratingViewController: UIViewController {
         CalibrationStatus.stopAnimating()
         CalButton.enabled = true
         CalibrationLabel.text = "Calibration Complete"
+        dingSound()
         
 
     }
     
     
+    func dingSound(){
+        let audioFilePath = NSBundle.mainBundle().pathForResource("ding", ofType: "mp3")
+        
+        if audioFilePath != nil {
+            
+            let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            
+            audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
+            
+            audioPlayer.play()
+            audioPlayer.volume = 2.0
+            
+            
+            
+        } else {
+            print("audio file is not found")
+        }
+    }
+
 
     /*
     // MARK: - Navigation

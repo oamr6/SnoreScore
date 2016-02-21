@@ -23,6 +23,7 @@ class DoneViewController: UIViewController {
         
         snoreCountLabel.text = NSUserDefaults.standardUserDefaults().integerForKey("countSnores").description
         self.navigationItem.setHidesBackButton(true, animated:true);
+        NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "countSnores")
         
         // Do any additional setup after loading the view.
     }
