@@ -12,14 +12,17 @@
 		676FB6BC1C7839980008D7DD /* SnoreRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */; };
 		676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */; };
 		676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6C11C78CE820008D7DD /* DoneViewController.swift */; };
+		676FB6C41C79A1B50008D7DD /* PrepareCalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FB6C31C79A1B50008D7DD /* PrepareCalibrationViewController.swift */; };
 		677AABE51C799E2B00017A3D /* relaxer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 677AABE41C799E2B00017A3D /* relaxer.wav */; };
 		D145A3611C790F7E00056A34 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3601C790F7E00056A34 /* logo.png */; };
-		D145A3671C79116600056A34 /* CalibrateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3641C79116600056A34 /* CalibrateButton.png */; };
-		D145A3681C79116600056A34 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3651C79116600056A34 /* SettingsButton.png */; };
-		D145A3691C79116600056A34 /* SleepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3661C79116600056A34 /* SleepButton.png */; };
 		D145A36B1C79797D00056A34 /* BeginCalibrationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A36A1C79797D00056A34 /* BeginCalibrationButton.png */; };
 		D145A36D1C79815D00056A34 /* WakeUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A36C1C79815D00056A34 /* WakeUpButton.png */; };
 		D145A36F1C79850C00056A34 /* ExitToMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A36E1C79850C00056A34 /* ExitToMenuButton.png */; };
+		D145A3731C79A10100056A34 /* clearlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3721C79A10100056A34 /* clearlogo.png */; };
+		D145A3781C79A3E200056A34 /* CalibrateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3741C79A3E200056A34 /* CalibrateButton.png */; };
+		D145A3791C79A3E200056A34 /* ContinueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3751C79A3E200056A34 /* ContinueButton.png */; };
+		D145A37A1C79A3E200056A34 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3761C79A3E200056A34 /* SettingsButton.png */; };
+		D145A37B1C79A3E200056A34 /* SleepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3771C79A3E200056A34 /* SleepButton.png */; };
 		D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */; };
 		D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9211C7816AD00DDBD1B /* Main.storyboard */; };
 		D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E9241C7816AD00DDBD1B /* Assets.xcassets */; };
@@ -99,14 +102,17 @@
 		676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnoreRecorderViewController.swift; sourceTree = "<group>"; };
 		676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		676FB6C11C78CE820008D7DD /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		676FB6C31C79A1B50008D7DD /* PrepareCalibrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareCalibrationViewController.swift; sourceTree = "<group>"; };
 		677AABE41C799E2B00017A3D /* relaxer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = relaxer.wav; path = "Supporting Files/relaxer.wav"; sourceTree = "<group>"; };
 		D145A3601C790F7E00056A34 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		D145A3641C79116600056A34 /* CalibrateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalibrateButton.png; sourceTree = "<group>"; };
-		D145A3651C79116600056A34 /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsButton.png; sourceTree = "<group>"; };
-		D145A3661C79116600056A34 /* SleepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SleepButton.png; sourceTree = "<group>"; };
 		D145A36A1C79797D00056A34 /* BeginCalibrationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BeginCalibrationButton.png; sourceTree = "<group>"; };
 		D145A36C1C79815D00056A34 /* WakeUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WakeUpButton.png; sourceTree = "<group>"; };
 		D145A36E1C79850C00056A34 /* ExitToMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitToMenuButton.png; sourceTree = "<group>"; };
+		D145A3721C79A10100056A34 /* clearlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clearlogo.png; sourceTree = "<group>"; };
+		D145A3741C79A3E200056A34 /* CalibrateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalibrateButton.png; sourceTree = "<group>"; };
+		D145A3751C79A3E200056A34 /* ContinueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContinueButton.png; sourceTree = "<group>"; };
+		D145A3761C79A3E200056A34 /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsButton.png; sourceTree = "<group>"; };
+		D145A3771C79A3E200056A34 /* SleepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SleepButton.png; sourceTree = "<group>"; };
 		D153E91A1C7816AD00DDBD1B /* SnoreScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoreScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153E9221C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,12 +175,14 @@
 		D153E9111C7816AD00DDBD1B = {
 			isa = PBXGroup;
 			children = (
+				D145A3741C79A3E200056A34 /* CalibrateButton.png */,
+				D145A3751C79A3E200056A34 /* ContinueButton.png */,
+				D145A3761C79A3E200056A34 /* SettingsButton.png */,
+				D145A3771C79A3E200056A34 /* SleepButton.png */,
+				D145A3721C79A10100056A34 /* clearlogo.png */,
 				D145A36E1C79850C00056A34 /* ExitToMenuButton.png */,
 				D145A36C1C79815D00056A34 /* WakeUpButton.png */,
 				D145A36A1C79797D00056A34 /* BeginCalibrationButton.png */,
-				D145A3641C79116600056A34 /* CalibrateButton.png */,
-				D145A3651C79116600056A34 /* SettingsButton.png */,
-				D145A3661C79116600056A34 /* SleepButton.png */,
 				D145A3601C790F7E00056A34 /* logo.png */,
 				D153E9DB1C7833F800DDBD1B /* AVFoundation.framework */,
 				D153E91C1C7816AD00DDBD1B /* SnoreScore */,
@@ -212,6 +220,7 @@
 				676FB6BB1C7839980008D7DD /* SnoreRecorderViewController.swift */,
 				676FB6BF1C783EF20008D7DD /* SettingTableViewController.swift */,
 				676FB6C11C78CE820008D7DD /* DoneViewController.swift */,
+				676FB6C31C79A1B50008D7DD /* PrepareCalibrationViewController.swift */,
 			);
 			path = SnoreScore;
 			sourceTree = "<group>";
@@ -418,17 +427,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D145A3681C79116600056A34 /* SettingsButton.png in Resources */,
 				D145A36F1C79850C00056A34 /* ExitToMenuButton.png in Resources */,
-				D145A3691C79116600056A34 /* SleepButton.png in Resources */,
 				D153E9281C7816AD00DDBD1B /* LaunchScreen.storyboard in Resources */,
+				D145A3731C79A10100056A34 /* clearlogo.png in Resources */,
 				D145A36D1C79815D00056A34 /* WakeUpButton.png in Resources */,
 				D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */,
 				D145A3611C790F7E00056A34 /* logo.png in Resources */,
+				D145A37A1C79A3E200056A34 /* SettingsButton.png in Resources */,
 				D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */,
+				D145A3791C79A3E200056A34 /* ContinueButton.png in Resources */,
 				677AABE51C799E2B00017A3D /* relaxer.wav in Resources */,
+				D145A37B1C79A3E200056A34 /* SleepButton.png in Resources */,
 				D145A36B1C79797D00056A34 /* BeginCalibrationButton.png in Resources */,
-				D145A3671C79116600056A34 /* CalibrateButton.png in Resources */,
+				D145A3781C79A3E200056A34 /* CalibrateButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +487,7 @@
 				D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */,
 				676FB6C21C78CE820008D7DD /* DoneViewController.swift in Sources */,
 				676FB6C01C783EF20008D7DD /* SettingTableViewController.swift in Sources */,
+				676FB6C41C79A1B50008D7DD /* PrepareCalibrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

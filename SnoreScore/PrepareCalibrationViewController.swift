@@ -1,41 +1,24 @@
 //
-//  DoneViewController.swift
+//  PrepareCalibrationViewController.swift
 //  SnoreScore
 //
-//  Created by MU IT Program on 2/20/16.
+//  Created by MU IT Program on 2/21/16.
 //  Copyright © 2016 Corey Matzat. All rights reserved.
 //
 
 import UIKit
 
-class DoneViewController: UIViewController {
+class PrepareCalibrationViewController: UIViewController {
 
-    @IBOutlet weak var snoreCountLabel: UILabel!
-    
-    var snoreCount: String?
-    var snoreCountInt: Int?
-    var box: Int?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Your Snore Score"
-        
-        snoreCountLabel.text = NSUserDefaults.standardUserDefaults().integerForKey("countSnores").description
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        
+
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func goBackToStart(sender: AnyObject) {
-        
-        navigationController?.navigationBarHidden = false
-        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     /*
