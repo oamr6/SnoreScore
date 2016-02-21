@@ -25,6 +25,7 @@
 		D145A3791C79A3E200056A34 /* ContinueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3751C79A3E200056A34 /* ContinueButton.png */; };
 		D145A37A1C79A3E200056A34 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3761C79A3E200056A34 /* SettingsButton.png */; };
 		D145A37B1C79A3E200056A34 /* SleepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D145A3771C79A3E200056A34 /* SleepButton.png */; };
+		D145A37D1C79BB0A00056A34 /* chord.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D145A37C1C79BB0A00056A34 /* chord.m4a */; };
 		D153E91E1C7816AD00DDBD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */; };
 		D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D153E9211C7816AD00DDBD1B /* Main.storyboard */; };
 		D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D153E9241C7816AD00DDBD1B /* Assets.xcassets */; };
@@ -117,6 +118,7 @@
 		D145A3751C79A3E200056A34 /* ContinueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContinueButton.png; sourceTree = "<group>"; };
 		D145A3761C79A3E200056A34 /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsButton.png; sourceTree = "<group>"; };
 		D145A3771C79A3E200056A34 /* SleepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SleepButton.png; sourceTree = "<group>"; };
+		D145A37C1C79BB0A00056A34 /* chord.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = chord.m4a; sourceTree = "<group>"; };
 		D153E91A1C7816AD00DDBD1B /* SnoreScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnoreScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D153E91D1C7816AD00DDBD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D153E9221C7816AD00DDBD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				D153E9251C7816AD00DDBD1B /* Assets.xcassets in Resources */,
 				D145A3611C790F7E00056A34 /* logo.png in Resources */,
 				D145A37A1C79A3E200056A34 /* SettingsButton.png in Resources */,
+				D145A37D1C79BB0A00056A34 /* chord.m4a in Resources */,
 				D153E9231C7816AD00DDBD1B /* Main.storyboard in Resources */,
 				D145A3791C79A3E200056A34 /* ContinueButton.png in Resources */,
 				677AABE51C799E2B00017A3D /* relaxer.wav in Resources */,
