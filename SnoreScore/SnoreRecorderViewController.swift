@@ -202,7 +202,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     
     
     func playCalmingMusic(){
-        let audioFilePath = NSBundle.mainBundle().pathForResource("beats", ofType: "wav")
+        let audioFilePath = NSBundle.mainBundle().pathForResource("chord", ofType: "m4a")
         
         if audioFilePath != nil {
             
