@@ -88,12 +88,14 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let viewController = segue.destinationViewController as? DoneViewController {
-                viewController.snoreCount = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
-                viewController.snoreCountInt = NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
-        }
-    }
+    //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //if let viewController = segue.destinationViewController as? DoneViewController {
+             //   viewController.snoreCount = 
+            
+            //    NSUserDefaults.standardUserDefaults().integerForKey("numberTimes").description
+                //viewController.snoreCountInt = //NSUserDefaults.standardUserDefaults().integerForKey("numberTimes")
+      //  }
+   // }
     
     func startAudio() {
         baseLine = NSUserDefaults.standardUserDefaults().doubleForKey("baseLineRecord")
@@ -159,6 +161,7 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
         
         if (loud / trials >= thresholdPercent) {
             count++
+            NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countSnores")
             
             let audioFilePath = NSBundle.mainBundle().pathForResource("avicii", ofType: "mp3")
             

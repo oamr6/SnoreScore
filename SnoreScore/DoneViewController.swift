@@ -11,7 +11,7 @@ import UIKit
 class DoneViewController: UIViewController {
 
     @IBOutlet weak var snoreCountLabel: UILabel!
-    @IBOutlet weak var previousSnore: UILabel!
+    
     var snoreCount: String?
     var snoreCountInt: Int?
     var box: Int?
@@ -21,8 +21,9 @@ class DoneViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Your Snore Score"
         
-        snoreCountLabel.text = snoreCount
+        snoreCountLabel.text = NSUserDefaults.standardUserDefaults().integerForKey("countSnores").description
         self.navigationItem.setHidesBackButton(true, animated:true);
+        
         // Do any additional setup after loading the view.
     }
 
