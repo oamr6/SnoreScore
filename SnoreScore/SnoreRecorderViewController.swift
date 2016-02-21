@@ -198,23 +198,23 @@ class SnoreRecorderViewController: UIViewController, WCSessionDelegate {
     }
     
     
-        func playCalmingMusic(){
-            let audioFilePath = NSBundle.mainBundle().pathForResource("relaxer", ofType: "mp3")
+    func playCalmingMusic(){
+        let audioFilePath = NSBundle.mainBundle().pathForResource("relaxer", ofType: "mp3")
+        
+        if audioFilePath != nil {
             
-            if audioFilePath != nil {
-                
-                let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
-                
-                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
-                
-                audioPlayer.play()
-                audioPlayer.volume = 1.0
-                
-                
-                
-            } else {
-                print("audio file is not found")
-            }
+            let audioFileUrl = NSURL.fileURLWithPath(audioFilePath!)
+            
+            audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileUrl)
+            
+            audioPlayer.play()
+            audioPlayer.volume = 1.0
+            
+            
+            
+        } else {
+            print("audio file is not found")
+        }
     }
     
 }

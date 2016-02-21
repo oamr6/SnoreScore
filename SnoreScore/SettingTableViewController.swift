@@ -7,11 +7,29 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class SettingTableViewController: UITableViewController {
-
+class SettingTableViewController: UITableViewController, WCSessionDelegate{
+    
+    var session: WCSession?
+    var newState = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if WCSession.isSupported() {
+            session = WCSession.defaultSession()
+            guard let session = session else {
+                return
+            }
+            session.delegate = self
+            session.activateSession()
+        }
+        else
+        {
+            newState = true
+            tableView.reloadData()
+        }
         
         self.title = "Settings"
         
@@ -38,12 +56,28 @@ class SettingTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    /*
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let users = NSUserDefaults.standardUserDefaults().boolForKey("NonWatchUsers")
+        if users == true
+        {
+            return 1
+        }
+        else
+        {
+            return 0
+        }
+    }
+*/
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let preference = NSUserDefaults.standardUserDefaults().boolForKey("SnoringAlertPreference")
-        if preference == true
+        if (preference == true && newState == false)
         {
             return 4
+        }
+        else if newState == true
+        {
+            return 1
         }
         else
         {
@@ -155,7 +189,6 @@ class WatchVibration: UITableViewCell
 class AlertFrequency: UITableViewCell
 {
     @IBOutlet weak var alertFrequencySlider: UISlider!
-    
     override func layoutSubviews() {
         alertFrequencySlider.value = NSUserDefaults.standardUserDefaults().floatForKey("AlertFrequencyPreference")
     }
