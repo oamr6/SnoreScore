@@ -364,33 +364,39 @@
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hwx-Yw-Eb9">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-VX-hKJ">
-                                <rect key="frame" x="300" y="355" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-X6-6xB">
-                                <rect key="frame" x="244" y="120" width="112" height="30"/>
-                                <state key="normal" title="Start Calibration"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-X6-6xB">
+                                <rect key="frame" x="180" y="70" width="240" height="170"/>
+                                <state key="normal" image="BeginCalibrationButton.png"/>
                                 <connections>
                                     <action selector="calibrating:" destination="awH-yg-LBW" eventType="touchUpInside" id="0sO-u7-ghj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-VX-hKJ">
+                                <rect key="frame" x="271" y="410" width="58" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Rv1-Gh-iXU" firstAttribute="top" secondItem="ZUb-X6-6xB" secondAttribute="bottom" constant="570" id="49T-uT-m3W"/>
+                            <constraint firstItem="nf4-VX-hKJ" firstAttribute="bottom" secondItem="Hwx-Yw-Eb9" secondAttribute="top" constant="50" id="8eP-pA-iCj"/>
+                            <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="top" secondItem="ZUb-X6-6xB" secondAttribute="bottom" constant="50" id="BWb-fe-qYf"/>
                             <constraint firstItem="nf4-VX-hKJ" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="DGX-5u-pcv"/>
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="KMM-fy-jzm"/>
                             <constraint firstItem="nf4-VX-hKJ" firstAttribute="top" secondItem="Hwx-Yw-Eb9" secondAttribute="bottom" constant="45" id="MuG-GT-HH3"/>
                             <constraint firstItem="Hwx-Yw-Eb9" firstAttribute="centerY" secondItem="pCT-U5-kJT" secondAttribute="centerY" id="SsX-iS-jgb"/>
-                            <constraint firstItem="ZUb-X6-6xB" firstAttribute="top" secondItem="ETi-BL-azS" secondAttribute="bottom" constant="100" id="gy3-fo-VFz"/>
+                            <constraint firstItem="nf4-VX-hKJ" firstAttribute="top" secondItem="Hwx-Yw-Eb9" secondAttribute="bottom" constant="100" id="WSh-kU-YD1"/>
+                            <constraint firstItem="ZUb-X6-6xB" firstAttribute="top" secondItem="ETi-BL-azS" secondAttribute="bottom" constant="50" id="gy3-fo-VFz"/>
                             <constraint firstItem="ZUb-X6-6xB" firstAttribute="centerX" secondItem="pCT-U5-kJT" secondAttribute="centerX" id="peR-5v-Hs7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="8eP-pA-iCj"/>
+                                <exclude reference="MuG-GT-HH3"/>
                                 <exclude reference="49T-uT-m3W"/>
                             </mask>
                         </variation>
@@ -407,6 +413,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BeginCalibrationButton.png" width="240" height="60"/>
         <image name="CalibrateButton.png" width="160" height="60"/>
         <image name="SettingsButton.png" width="160" height="60"/>
         <image name="SleepButton.png" width="160" height="60"/>
