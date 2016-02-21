@@ -140,9 +140,12 @@ class SnoringAlert: UITableViewCell
 class WatchVibration: UITableViewCell
 {
     @IBOutlet weak var watchVibrationAlertSwitch: UISwitch!
+    override func layoutSubviews() {
+        watchVibrationAlertSwitch.on = NSUserDefaults.standardUserDefaults().boolForKey("WatchAlertPreference")
+    }
     @IBAction func watchVibrationAlertStateChange(sender: AnyObject)
     {
-      //  NSUserDefaults.standardUserDefaults().setValue(watchVibrationAlertSwitch, forKey: "VibrationAlert")
+            NSUserDefaults.standardUserDefaults().setBool(watchVibrationAlertSwitch.on, forKey: "WatchAlertPreference")
     }
     
 }
